@@ -1,0 +1,70 @@
+{
+  "extends": [
+    "config:base",
+    "group:allNonMajor",
+    "schedule:weekly",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "ignorePaths": [
+    "docs/**"
+  ],
+  "labels": ["renovate"],
+  "packageRules": [{
+    "description": "Limit the aws sdk to monthly updates because otherwise it PRs every day",
+    "packageNames": ["com.amazonaws:*"],
+    "schedule": ["monthly"]
+  },
+  {
+    "matchPackageNames": ["org.eclipse.persistence:eclipselink"],
+    "allowedVersions": "<=2.7.10"
+  },
+  {
+    "matchPackageNames": ["org.eclipse.persistence:org.eclipse.persistence.jpa"],
+    "allowedVersions": "<=2.7.10"
+  },
+  {
+    "matchPackageNames": ["org.glassfish.jaxb:jaxb-runtime"],
+    "allowedVersions": "<=2.3.6"
+  },
+  {
+    "matchPackageNames": ["com.sun.mail:jakarta.mail"],
+    "allowedVersions": "<=1.6.7"
+  },
+  {
+    "matchPackageNames": ["org.apache.oltu.oauth2:org.apache.oltu.oauth2.common"],
+    "allowedVersions": "<=1.0.1"
+  },
+  {
+    "matchPackageNames": ["org.apache.oltu.oauth2:org.apache.oltu.oauth2.client"],
+    "allowedVersions": "<=1.0.1"
+  },
+  {
+    "matchPackageNames": ["org.apache.oltu.oauth2:org.apache.oltu.oauth2.httpclient4"],
+    "allowedVersions": "<=1.0.1"
+  },
+  {
+    "matchPackageNames": ["org.glassfish.jersey.media:jersey-media-multipart"],
+    "allowedVersions": "<=2.36"
+  },
+  {
+    "matchPackageNames": ["ch.qos.logback:logback-core"],
+    "allowedVersions": "<=1.2.11"
+  },
+  {
+    "matchPackageNames": ["ch.qos.logback:logback-classic"],
+    "allowedVersions": "<=1.2.11"
+  },
+  {
+    "depTypeList": ["dependencies"],
+    "updateTypes": ["patch", "minor"],
+    "groupName": "non-major"
+  }],
+  "regexManagers": [
+    {
+      "fileMatch": ["^build\\.gradle$"],
+      "matchStrings": ["[\\s\\n{](mavenBom)\\s*['\"](?<depName>[a-zA-Z][-_a-zA-Z0-9.]*?:[a-zA-Z][-_a-zA-Z0-9.]*?):(?<currentValue>[a-zA-Z0-9][-.a-zA-Z0-9]*?)['\"]"],
+      "datasourceTemplate": "maven",
+      "versioningTemplate": "gradle"
+    }
+  ]
+}

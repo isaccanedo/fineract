@@ -1,0 +1,747 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+// TODO: this is work in progress, please follow FINERACT-1171
+buildscript {
+    ext {
+        jacocoVersion = '0.8.7'
+        retrofitVersion = '2.9.0'
+        okhttpVersion = '4.9.3'
+        oltuVersion = '1.0.1'
+        fineractCustomProjects = []
+        fineractJavaProjects = subprojects.findAll{
+            [
+                'fineract-api',
+                'fineract-provider',
+                'integration-tests',
+                'twofactor-tests',
+                'oauth2-tests',
+                'fineract-client',
+                'fineract-avro-schemas'
+            ].contains(it.name)
+        }
+        fineractPublishProjects = subprojects.findAll{
+            [
+                'fineract-avro-schemas',
+                'fineract-client'
+            ].contains(it.name)
+        }
+        npmRepository = 'https://npm.pkg.github.com'
+    }
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-cargo-plugin:2.9.0'
+        classpath 'org.eclipse.persistence:eclipselink:2.7.10'
+        classpath 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
+        classpath 'com.google.cloud.tools:jib-layer-filter-extension-gradle:0.3.0'
+    }
+}
+
+plugins {
+    id "org.barfuin.gradle.taskinfo" version "1.4.0"
+    id 'com.adarshr.test-logger' version '3.2.0'
+    id 'com.diffplug.spotless' version '6.11.0' apply false
+    id 'org.nosphere.apache.rat' version '0.8.0' apply false
+    id 'com.github.hierynomus.license' version '0.16.1' apply false
+    id 'com.github.jk1.dependency-license-report' version '2.1' apply false
+    id 'org.openapi.generator' version '6.2.0' apply false
+    id 'org.zeroturnaround.gradle.jrebel' version '1.1.12' apply false
+    id 'org.springframework.boot' version '2.7.5' apply false
+    id 'net.ltgt.errorprone' version '2.0.2' apply false
+    id 'io.swagger.core.v3.swagger-gradle-plugin' version '2.2.4' apply false
+    id 'com.gorylenko.gradle-git-properties' version '2.4.1' apply false
+    id 'org.asciidoctor.jvm.convert' version '3.3.2' apply false
+    id 'org.asciidoctor.jvm.pdf' version '3.3.2' apply false
+    id 'org.asciidoctor.jvm.epub' version '3.3.2' apply false
+    id 'org.asciidoctor.jvm.revealjs' version '3.3.2' apply false
+    id 'org.asciidoctor.jvm.gems' version '3.3.2' apply false
+    id 'org.asciidoctor.kindlegen.base' version '3.2.0' apply false
+    id 'com.google.cloud.tools.jib' version '3.3.0' apply false
+    id 'fr.brouillard.oss.gradle.jgitver' version '0.10.0-rc03'
+    id 'org.sonarqube' version '3.4.0.2513'
+    id 'com.github.andygoossens.modernizer' version '1.6.2' apply false
+    id 'com.github.spotbugs' version '5.0.13' apply false
+    id 'se.thinkcode.cucumber-runner' version '0.0.11' apply false
+    id "com.github.davidmc24.gradle.plugin.avro-base" version "1.5.0" apply false
+}
+
+apply from: "${rootDir}/buildSrc/src/main/groovy/org.apache.fineract.release.gradle"
+
+description = '''\
+Run as:
+gradle clean bootRun'''
+
+ext['groovy.version'] = '3.0.10'
+ext['swaggerFile'] = "$rootDir/fineract-provider/build/classes/java/main/static/fineract.yaml".toString()
+
+allprojects  {
+    group = 'org.apache.fineract'
+
+    jgitver {
+        strategy 'PATTERN'
+        versionPattern ( project.hasProperty('fineract.release.version') ? '${v}' : '${M}.${m}.${p}-${meta.GIT_SHA1_8}' )
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'com.adarshr.test-logger'
+    apply plugin: 'com.diffplug.spotless'
+    apply plugin: 'com.github.hierynomus.license'
+    apply plugin: 'org.nosphere.apache.rat'
+    apply plugin: 'project-report'
+    apply plugin: 'com.github.jk1.dependency-license-report'
+
+    // Configuration for the sonarqube plugin is now in GitHub Actions
+
+    // Configuration for the spotless plugin
+    // https://github.com/diffplug/spotless/tree/main/plugin-gradle
+    spotless {
+        format 'misc', {
+            target '**/*.md', '**/*.properties', '**/.gitignore', '**/.openapi-generator-ignore', '**/*.yml', '**/*.xml', '**/**.json', '**/*.sql'
+            targetExclude '**/build/**', '**/bin/**', '**/.settings/**', '**/.idea/**', '**/.gradle/**', '**/gradlew.bat', '**/licenses/**', '**/banner.txt', '.vscode/**'
+            indentWithSpaces(4)
+            endWithNewline()
+            trimTrailingWhitespace()
+        }
+
+        groovyGradle {
+            target '*.gradle', '**/*.gradle'
+            targetExclude '**/build/**'
+            greclipse()
+            indentWithSpaces(4)
+            endWithNewline()
+            trimTrailingWhitespace()
+        }
+
+        lineEndings 'UNIX'
+    }
+
+    // Configuration for Gradle license plug-in
+    // https://github.com/hierynomus/license-gradle-plugin
+    license {
+        header rootProject.file("$rootDir/APACHE_LICENSETEXT.md")
+        excludes([
+            "**/gradlew*",
+            "**/git.properties",
+            "**/*.html",
+            "**/templates/**",
+            "**/features/**",
+            "**/results/**",
+            "**/package-info.java",
+            "**/keystore.jks",
+            "**/legacy-docs/**",
+            "**/banner.txt",
+            "**/build.gradle.mustache",
+            "**/pom.mustache",
+            "**/avro/**/*.java",
+            "**/org/apache/fineract/client/**/*.java"
+        ])
+        strictCheck true
+    }
+
+    licenseReport {
+        outputDir = "$projectDir/licenses"
+    }
+
+    // Configuration for Apache Release Audit Tool task
+    // https://github.com/eskatos/creadur-rat-gradle
+    rat {
+        verbose = false
+        reportDir = file("$buildDir/reports/rat")
+        excludes = [
+            '**/src/main/templates/**/*.mustache',
+            '**/.dockerignore',
+            '**/*.launch',
+            '**/licenses/**',
+            '**/*.md',
+            '**/*.adoc',
+            '**/.asciidoctorconfig',
+            '**/*.puml',
+            '**/*.github/**',
+            '**/MANIFEST.MF',
+            '**/spring.factories',
+            '**/*.json',
+            '**/*.json.template',
+            '**/*.txt',
+            '**/*.log',
+            '**/fineractdev-eclipse-preferences.epf',
+            '**/features/**',
+            '**/templates/**',
+            '**/results/**',
+            '**/.classpath',
+            '**/.project',
+            '**/.idea/**',
+            '**/*.ipr',
+            '**/*.iws',
+            '**/.settings/**',
+            '**/bin/**',
+            '**/.git/**',
+            '**/.gitignore',
+            '**/.openapi-generator-ignore',
+            '**/.gitkeep',
+            '**/*.iml',
+            '**/config/swagger/templates/**',
+            // Notice files
+            '**/NOTICE_RELEASE',
+            '**/NOTICE_SOURCE',
+            // gradle
+            '**/.gradle/**',
+            '**/gradlew',
+            '**/gradlew.bat',
+            '**/gradle/wrapper/gradle-wrapper.properties',
+            '**/caches/**',
+            '**/daemon/**',
+            '**/native/**',
+            '**/wrapper/**',
+            '**/build/**',
+            // Api Docs
+            '**/legacy-docs/*.*',
+            '**/docs/system-architecture/.htaccess',
+            '**/docs/system-architecture/404.html',
+            '**/docs/system-architecture/index.html',
+            '**/docs/system-architecture/**/*.xml',
+            '**/bootstrap-3.0.0/assets/application.js',
+            '**/system-architecture/js/plugins.js',
+            // Apache License
+            '**/bootstrap-3.0.0/assets/less.js',
+            '**/css/bootstrap-3.0.0/**/*.*',
+            // Public Domain See http://www.JSON.org/js.html
+            '**/bootstrap-3.0.0/assets/json2.js.htm',
+            // MIT License
+            '**/modernizr-2.6.2.min.js',
+            '**/css/normalize.css',
+            '**/assets/filesaver.js',
+            '**/css/fonts/glyphicons-halflings-regular.svg',
+            '**/assets/jszip.js',
+            '**/assets/jquery.js',
+            '**/legacy-docs/jquery-1.7.min.js',
+            '**/css/toc-0.1.2/**/*.*',
+            '**/docs/system-architecture/css/main.css',
+            '**/system-architecture/js/vendor/jquery-1.9.1.min.js',
+            '**/system-architecture/js/vendor/toc-0.1.2/jquery.toc.min.js',
+            '**/assets/respond.min.js',
+            '**/assets/html5shiv.js',
+            // BSD License
+            '**/assets/uglify.js',
+            // Ignore out folder
+            '**/out/**',
+            // Git build info
+            "**/git.properties",
+            ".mailmap",
+            '**/images/diag-*.svg',
+            '**/*.avsc',
+            "**/generated/**/*MapperImpl.java"
+        ]
+    }
+}
+
+// NOTE: dynamically load all custom modules
+file("${rootDir}/custom").eachDir { companyDir ->
+    if('build' != companyDir.name && 'docker' != companyDir.name) {
+        file("${rootDir}/custom/${companyDir.name}").eachDir { categoryDir ->
+            if('build' != categoryDir.name) {
+                file("${rootDir}/custom/${companyDir.name}/${categoryDir.name}").eachDir { moduleDir ->
+                    if('build' != moduleDir.name) {
+                        project.fineractJavaProjects.add(project(":custom:${companyDir.name}:${categoryDir.name}:${moduleDir.name}"))
+                        project.fineractCustomProjects.add(project(":custom:${companyDir.name}:${categoryDir.name}:${moduleDir.name}"))
+                    }
+                }
+            }
+        }
+    }
+}
+
+configure(project.fineractJavaProjects) {
+    // NOTE: order matters!
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'checkstyle'
+    apply plugin: 'jacoco'
+    apply plugin: 'net.ltgt.errorprone'
+    apply plugin: 'com.github.spotbugs'
+    apply plugin: 'com.github.andygoossens.modernizer'
+    apply plugin: 'se.thinkcode.cucumber-runner'
+    apply from: "${rootDir}/buildSrc/src/main/groovy/org.apache.fineract.dependencies.gradle"
+
+    group = 'org.apache.fineract'
+
+    /* define the valid syntax level for source files */
+    sourceCompatibility = JavaVersion.VERSION_17
+    /* define binary compatibility version */
+    targetCompatibility = JavaVersion.VERSION_17
+
+    /* http://stackoverflow.com/questions/19653311/jpa-repository-works-in-idea-and-production-but-not-in-gradle */
+    sourceSets.main.output.resourcesDir = sourceSets.main.java.outputDir
+    sourceSets.test.output.resourcesDir = sourceSets.test.java.outputDir
+
+    configurations {
+        implementation.setCanBeResolved(true)
+        api.setCanBeResolved(true)
+    }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs += [
+            "-Xlint:unchecked",
+            "-Xlint:cast",
+            "-Xlint:auxiliaryclass",
+            "-Xlint:deprecation",
+            "-Xlint:dep-ann",
+            "-Xlint:divzero",
+            "-Xlint:empty",
+            "-Xlint:exports",
+            "-Xlint:fallthrough",
+            "-Xlint:finally",
+            "-Xlint:module",
+            "-Xlint:opens",
+            "-Xlint:options",
+            "-Xlint:overloads",
+            "-Xlint:overrides",
+            "-Xlint:path",
+            "-Xlint:processing",
+            "-Xlint:removal",
+            "-Xlint:requires-automatic",
+            "-Xlint:requires-transitive-automatic",
+            "-Xlint:try",
+            "-Xlint:varargs",
+            "-Xlint:preview",
+            "-Xlint:static",
+            // -Werror needs to be disabled because EclipseLink's static weaving doesn't generate warning-free code
+            // and during an IntelliJ recompilation, it fails
+            //"-Werror",
+            "-Xmaxwarns",
+            1500,
+            "-Xmaxerrs",
+            1500
+        ]
+        // TODO FINERACT-959 (gradually) enable -Xlint:all (see "javac -help -X")
+
+        options.deprecation = true
+    }
+
+    dependencies {
+        spotbugsPlugins 'jp.skypencil.findbugs.slf4j:bug-pattern:1.5.0@jar'
+    }
+
+    // Configuration for the spotless plugin
+    // https://github.com/diffplug/spotless/tree/main/plugin-gradle
+    spotless {
+        java {
+            targetExclude '**/build/**', '**/bin/**', '**/out/**'
+            importOrder() //sort imports alphabetically
+            removeUnusedImports()
+            eclipse().configFile "$rootDir/config/fineractdev-formatter.xml"
+            endWithNewline()
+            trimTrailingWhitespace()
+
+            // Enforce style modifier order
+            custom 'Modifier ordering', {
+                def modifierRanking = [
+                    public      : 1,
+                    protected   : 2,
+                    private     : 3,
+                    abstract    : 4,
+                    default     : 5,
+                    static      : 6,
+                    final       : 7,
+                    transient   : 8,
+                    volatile    : 9,
+                    synchronized: 10,
+                    native      : 11,
+                    strictfp    : 12]
+                // Find any instance of multiple modifiers. Lead with a non-word character to avoid
+                // accidental matching against for instance, "an alternative default value"
+                it.replaceAll(/\W(?:public |protected |private |abstract |default |static |final |transient |volatile |synchronized |native |strictfp ){2,}/, {
+                    // Do not replace the leading non-word character.  Identify the modifiers
+                    it.replaceAll(/(?:public |protected |private |abstract |default |static |final |transient |volatile |synchronized |native |strictfp ){2,}/, {
+                        // Sort the modifiers according to the ranking above
+                        it.split().sort({ modifierRanking[it] }).join(' ') + ' '
+                    }
+                    )
+                }
+                )
+            }
+        }
+
+        lineEndings 'UNIX'
+    }
+
+    // If we are running Gradle within Eclipse to enhance classes,
+    // set the classes directory to point to Eclipse's default build directory
+    if (project.hasProperty('env') && project.getProperty('env') == 'eclipse') {
+        sourceSets.main.java.outputDir = file("$projectDir/bin/main")
+    }
+
+    // Configuration for the Checkstyle plugin
+    // https://docs.gradle.org/current/userguide/checkstyle_plugin.html
+    dependencies {
+        checkstyle 'com.puppycrawl.tools:checkstyle:10.3.4'
+        checkstyle 'com.github.sevntu-checkstyle:sevntu-checks:1.42.0'
+    }
+
+    // Configuration for JaCoCo code coverage task
+    // https://www.eclemma.org/jacoco/
+    jacoco {
+        toolVersion = jacocoVersion
+        reportsDir = file("$buildDir/reports/jacoco")
+    }
+
+    jacocoTestReport {
+        reports {
+            html.enabled=true
+            xml.enabled=true
+            html.destination file("${buildDir}/code-coverage")
+        }
+    }
+
+    // Configuration for the errorprone plugin
+    // https://github.com/tbroyer/gradle-errorprone-plugin
+    dependencies {
+        errorprone "com.google.errorprone:error_prone_core:2.15.0"
+    }
+
+    tasks.withType(JavaCompile) {
+        options.errorprone {
+            disableWarningsInGeneratedCode = true
+            excludedPaths = ".*/build/.*"
+            disable(
+                    // TODO Remove disabled checks from this list, by fixing remaining usages
+                    "UnusedVariable",
+                    "TypeParameterUnusedInFormals",
+                    "EmptyBlockTag",
+                    "MissingSummary",
+                    "InvalidParam",
+                    "ReturnFromVoid",
+                    "AlmostJavadoc",
+                    "InvalidBlockTag",
+                    "JavaUtilDate", // TODO FINERACT-1298
+                    "ReturnValueIgnored",
+                    "DirectInvocationOnMock",
+                    "CanIgnoreReturnValueSuggester",
+                    "SameNameButDifferent", // Until errorprone recognizes Lombok
+                    "MultiVariableDeclaration" // Until errorprone recognizes Lombok
+                    )
+            error(
+                    "DefaultCharset",
+                    "RemoveUnusedImports",
+                    "WaitNotInLoop",
+                    "ThreeLetterTimeZoneID",
+                    "VariableNameSameAsType",
+                    "UnnecessaryParentheses",
+                    "MultipleTopLevelClasses",
+                    "MixedMutabilityReturnType",
+                    "AssertEqualsArgumentOrderChecker",
+                    "EmptySetMultibindingContributions",
+                    "BigDecimalEquals",
+                    "MixedArrayDimensions",
+                    "PackageLocation",
+                    "UseBinds",
+                    "BadImport",
+                    "IntLongMath",
+                    "FloatCast",
+                    "ReachabilityFenceUsage",
+                    "StreamResourceLeak",
+                    "TruthIncompatibleType",
+                    "ByteBufferBackingArray",
+                    "OrphanedFormatString",
+                    "CatchAndPrintStackTrace",
+                    "ObjectToString",
+                    "StringSplitter",
+                    "AssertThrowsMultipleStatements",
+                    "BoxedPrimitiveConstructor",
+                    "EmptyCatch",
+                    "BoxedPrimitiveEquality",
+                    "SynchronizeOnNonFinalField",
+                    "WildcardImport",
+                    "FutureReturnValueIgnored",
+                    "PrivateConstructorForNoninstantiableModule",
+                    "ClassCanBeStatic",
+                    "ClassNewInstance",
+                    "UnnecessaryStaticImport",
+                    "UnsafeFinalization",
+                    "JavaTimeDefaultTimeZone",
+                    "JodaPlusMinusLong",
+                    "SwitchDefault",
+                    "VarTypeName",
+                    "ArgumentSelectionDefectChecker",
+                    "CompareToZero",
+                    "InjectOnConstructorOfAbstractClass",
+                    "ImmutableEnumChecker",
+                    "NarrowingCompoundAssignment",
+                    "MissingCasesInEnumSwitch",
+                    "ReferenceEquality",
+                    "UndefinedEquals",
+                    "UnescapedEntity",
+                    "ModifyCollectionInEnhancedForLoop",
+                    "NonCanonicalType",
+                    "InvalidInlineTag",
+                    "MutablePublicArray",
+                    "StaticAssignmentInConstructor",
+                    "ProtectedMembersInFinalClass",
+                    "OperatorPrecedence",
+                    "EqualsGetClass",
+                    "EqualsUnsafeCast",
+                    "DoubleBraceInitialization",
+                    "UnnecessaryDefaultInEnumSwitch",
+                    "UnusedNestedClass",
+                    "UnusedMethod",
+                    "ModifiedButNotUsed",
+                    "InconsistentCapitalization",
+                    "MissingOverride",
+                    // TODO enable these remaining checks (one by one)
+                    // "InvalidBlockTag",
+                    // "InconsistentOverloads",
+                    // "MethodCanBeStatic",
+                    // "Var",
+                    // "ConstantField",
+                    // "UnnecessaryDefaultInEnumSwitch",
+                    // "FieldCanBeFinal"
+                    )
+        }
+    }
+
+    compileJava {
+        dependsOn(rat, licenseMain, licenseTest)
+    }
+
+    dependencies {
+        implementation (
+                'ch.qos.logback:logback-core',
+                'org.slf4j:slf4j-api',
+                'org.slf4j:log4j-over-slf4j',
+                'org.slf4j:jul-to-slf4j',
+                )
+        implementation ("ch.qos.logback:logback-classic") {
+            exclude(module: "slf4j-api")
+        }
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        testImplementation( 'org.mockito:mockito-core',
+                'org.mockito:mockito-junit-jupiter',
+                'org.junit.jupiter:junit-jupiter-api',
+                'org.junit.jupiter:junit-jupiter-engine',
+                'org.junit.platform:junit-platform-runner', // required to be able to run tests directly under Eclipse, see FINERACT-943 & FINERACT-1021
+                'org.bouncycastle:bcpkix-jdk15to18',
+                'org.bouncycastle:bcprov-jdk15to18',
+                'org.awaitility:awaitility',
+                'com.google.truth:truth',
+                'com.google.truth.extensions:truth-java8-extension',
+                'io.cucumber:cucumber-core',
+                'io.cucumber:cucumber-java',
+                'io.cucumber:cucumber-java8',
+                'io.cucumber:cucumber-junit-platform-engine',
+                )
+    }
+
+    test {
+        useJUnitPlatform()
+
+        if (project.hasProperty('excludeTests')) {
+            filter {
+                excludeTestsMatching project.property('excludeTests')
+            }
+        }
+    }
+
+    testlogger {
+        logLevel 'quiet'
+    }
+
+    cucumber {
+        tags = 'not @ignore'
+        main = 'io.cucumber.core.cli.Main'
+        shorten = 'argfile'
+    }
+
+    // Configuration for spotbugs plugin
+    // https://github.com/spotbugs/spotbugs-gradle-plugin
+
+    // To generate an HTML report instead of XML
+    spotbugs {
+        reportLevel = 'high'
+        showProgress = false
+        excludeFilter = file("$rootDir/config/spotbugs/exclude.xml")
+    }
+    // https://github.com/spotbugs/spotbugs-gradle-plugin/issues/242
+    spotbugsMain {
+        reports {
+            html {
+                enabled = true
+                stylesheet = 'fancy-hist.xsl'
+            }
+        }
+    }
+    spotbugsTest {
+        reports {
+            html {
+                enabled = true
+                stylesheet = 'fancy-hist.xsl'
+            }
+        }
+    }
+
+    // Configuration for https://github.com/andygoossens/gradle-modernizer-plugin
+    modernizer {
+        includeTestClasses = true
+        failOnViolations = true
+        violationLogLevel="error"
+        javaVersion = project.targetCompatibility
+        ignoreGeneratedClasses = true
+    }
+}
+
+configure(project.fineractCustomProjects) {
+    compileJava {
+        dependsOn = []
+    }
+
+    dependencies {
+        implementation (
+                'org.springframework:spring-context',
+                'ch.qos.logback:logback-core',
+                'org.slf4j:slf4j-api',
+                'org.slf4j:log4j-over-slf4j',
+                'org.slf4j:jul-to-slf4j',
+                )
+        implementation ("ch.qos.logback:logback-classic") {
+            exclude(module: "slf4j-api")
+        }
+
+        compileOnly('org.projectlombok:lombok')
+        annotationProcessor('org.projectlombok:lombok')
+        annotationProcessor('org.mapstruct:mapstruct-processor')
+        annotationProcessor('org.springframework.boot:spring-boot-autoconfigure-processor')
+        annotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
+
+        testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'com.jayway.jsonpath', module: 'json-path'
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+            exclude group: 'jakarta.activation'
+            exclude group: 'javax.activation'
+            exclude group: 'org.skyscreamer'
+        }
+        testImplementation( 'org.mockito:mockito-core',
+                'org.mockito:mockito-inline',
+                'org.mockito:mockito-junit-jupiter',
+                'org.junit.jupiter:junit-jupiter-api',
+                'org.junit.jupiter:junit-jupiter-engine',
+                'org.junit.platform:junit-platform-runner', // required to be able to run tests directly under Eclipse, see FINERACT-943 & FINERACT-1021
+                'org.bouncycastle:bcpkix-jdk15to18',
+                'org.bouncycastle:bcprov-jdk15to18',
+                'org.awaitility:awaitility',
+                'com.google.truth:truth',
+                'com.google.truth.extensions:truth-java8-extension',
+                'io.github.classgraph:classgraph',
+                'io.cucumber:cucumber-core',
+                'io.cucumber:cucumber-java',
+                'io.cucumber:cucumber-java8',
+                'io.cucumber:cucumber-junit-platform-engine',
+                'io.cucumber:cucumber-spring',
+                )
+
+        testCompileOnly('org.projectlombok:lombok')
+        testAnnotationProcessor('org.projectlombok:lombok')
+        testAnnotationProcessor('org.mapstruct:mapstruct-processor')
+        testAnnotationProcessor('org.springframework.boot:spring-boot-autoconfigure-processor')
+        testAnnotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
+    }
+}
+
+configure(project.fineractPublishProjects) {
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                groupId 'org.apache.fineract'
+                artifactId project.name
+                version "${project.version}-SNAPSHOT"
+
+                from components.java
+
+                versionMapping {
+                    usage('java-api') {
+                        fromResolutionOf('runtimeClasspath')
+                    }
+                    usage('java-runtime') {
+                        fromResolutionResult()
+                    }
+                }
+
+                pom {
+                    name = "Fineract: ${project.name}"
+                    description = 'A secure, multi-tenanted microfinance platform'
+                    url = 'https://fineract.apache.org'
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.html'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:https://github.com/apache/fineract.git'
+                        developerConnection = 'scm:git:git://github.com:apache/fineract.git'
+                        url = 'https://fineract.apache.org/'
+                    }
+                }
+            }
+        }
+
+        repositories {
+            def releaseUrl = 'https://repository.apache.org/content/repositories/releases'
+            def stagingUrl = 'https://repository.apache.org/content/repositories/snapshots'
+
+            maven {
+                name 'apache'
+                url hasProperty('fineract.release.version') ? releaseUrl : stagingUrl
+                credentials {
+                    username "${findProperty('fineract.config.username')}"
+                    password "${findProperty('fineract.config.password')}"
+                }
+            }
+        }
+    }
+
+    signing {
+        sign publishing.publications.mavenJava
+    }
+}
+
+task printSourceSetInformation() {
+    doLast{
+        sourceSets.each { srcSet ->
+            println "["+srcSet.name+"]"
+            print "-->Source directories: "+srcSet.allJava.srcDirs+"\n"
+            print "-->Output directories: "+srcSet.output.classesDirs.files+"\n"
+            print "-->Compile classpath:\n"
+            srcSet.compileClasspath.files.each {
+                print "  "+it.path+"\n"
+            }
+            println ""
+        }
+    }
+}
