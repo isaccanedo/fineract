@@ -31,7 +31,7 @@ e pare e destrua assim:
 
     docker rm -f mariadb-10.9
 
-Esteja ciente de que este banco de dados de contêiner de banco de dados mantém seu estado dentro do contêiner e não no sistema de arquivos do host. It is lost when you destroy (rm) this container.  This is typically fine for development.  See [Caveats: Where to Store Data on the database container documentation](https://hub.docker.com/_/mariadb) re. how to make it persistent instead of ephemeral.
+Esteja ciente de que este banco de dados de contêiner de banco de dados mantém seu estado dentro do contêiner e não no sistema de arquivos do host. Ele é perdido quando você destrói (rm) este contêiner. Isso normalmente é bom para o desenvolvimento. See [Caveats: Where to Store Data on the database container documentation](https://hub.docker.com/_/mariadb) re. how to make it persistent instead of ephemeral.
 
 Tomcat v9 is only required if you wish to deploy the Fineract WAR to a separate external servlet container.  Note that you do not require to install Tomcat to develop Fineract, or to run it in production if you use the self-contained JAR, which transparently embeds a servlet container using Spring Boot.  (Until FINERACT-730, Tomcat 7/8 were also supported, but now Tomcat 9 is required.)
 
