@@ -15,7 +15,7 @@ para começar a contribuir para este projeto no IDE on-line GitPod.io baseado na
 Comunidade
 =========
 
-If you are interested in contributing to this project, but perhaps don't quite know how and where to get started, please [join our developer mailing list](http://fineract.apache.org/#contribute), listen into our conversations, chime into threads, and just send us a "Hello!" introduction email; we're a friendly bunch, and look forward to hearing from you.
+Se você estiver interessado em contribuir para este projeto, mas talvez não saiba bem como e por onde começar, por favor [insira-se à nossa lista de discussão de desenvolvedores](http://fineract.apache.org/#contribute), ouça nosso conversas, participe de tópicos e apenas nos envie um "Olá!" e-mail de apresentação; somos um grupo amigável e estamos ansiosos para ouvir de você.
 
 
 Requirements
