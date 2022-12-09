@@ -18,7 +18,7 @@ Comunidade
 Se você estiver interessado em contribuir para este projeto, mas talvez não saiba bem como e por onde começar, por favor [insira-se à nossa lista de discussão de desenvolvedores](http://fineract.apache.org/#contribute), ouça nosso conversas, participe de tópicos e apenas nos envie um "Olá!" e-mail de apresentação; somos um grupo amigável e estamos ansiosos para ouvir de você.
 
 
-Requirements
+Requisitos
 ============
 * Java >= 17 (Azul Zulu JVM is tested by our CI on GitHub Actions)
 * MariaDB 10.9
