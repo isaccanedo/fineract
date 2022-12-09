@@ -33,7 +33,7 @@ e pare e destrua assim:
 
 Esteja ciente de que este banco de dados de contêiner de banco de dados mantém seu estado dentro do contêiner e não no sistema de arquivos do host. Ele é perdido quando você destrói (rm) este contêiner. Isso normalmente é bom para o desenvolvimento.Consulte [Advertências: onde armazenar dados na documentação do contêiner do banco de dados](https://hub.docker.com/_/mariadb). como torná-lo persistente em vez de efêmero.
 
-O Tomcat v9 é necessário apenas se você deseja implantar o Fineract WAR em um contêiner de servlet externo separado.  Note that you do not require to install Tomcat to develop Fineract, or to run it in production if you use the self-contained JAR, which transparently embeds a servlet container using Spring Boot.  (Until FINERACT-730, Tomcat 7/8 were also supported, but now Tomcat 9 is required.)
+O Tomcat v9 é necessário apenas se você deseja implantar o Fineract WAR em um contêiner de servlet externo separado. Observe que você não precisa instalar o Tomcat para desenvolver o Fineract ou executá-lo na produção se usar o JAR independente, que incorpora de forma transparente um contêiner de servlet usando o Spring Boot. (Até o FINERACT-730, o Tomcat 7/8 também era suportado, mas agora o Tomcat 9 é necessário.)
 
 IMPORTANT: if you use MySQL or MariaDB
 ============
