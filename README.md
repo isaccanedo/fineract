@@ -23,7 +23,7 @@ Requisitos
 * Java >= 17 (Azul Zulu JVM is tested by our CI on GitHub Actions)
 * MariaDB 10.9
 
-You can run the required version of the database server in a container, instead of having to install it, like this:
+Você pode executar a versão necessária do servidor de banco de dados em um contêiner, em vez de instalá-lo, assim:
 
     docker run --name mariadb-10.9 -p 3306:3306 -e MARIADB_ROOT_PASSWORD=mysql -d mariadb:10.9
 
