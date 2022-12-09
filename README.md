@@ -10,7 +10,7 @@ O Fineract é uma plataforma madura com APIs abertas que fornece uma solução d
 [![Código agora! (Gitpod)](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/apache/fineract)
 para começar a contribuir para este projeto no IDE on-line GitPod.io baseado na web imediatamente!
 (Inicialmente, você pode ter que pressionar F1 para localizar o comando e executar "Java: Start Language Server".)
-It's of course also possible to contribute with a "traditional" local development environment (see below).
+É claro que também é possível contribuir com um ambiente de desenvolvimento local "tradicional" (veja abaixo).
 
 Comunidade
 =========
