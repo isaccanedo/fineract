@@ -8,7 +8,7 @@ O Fineract é uma plataforma madura com APIs abertas que fornece uma solução d
 [Dê uma olhada no FAQ em nosso Wiki em apache.org](https://cwiki.apache.org/confluence/display/FINERACT/FAQ) se este README não responder o que você está procurando.  [Visite nosso Painel do JIRA](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) para encontrar problemas para trabalhar, ver no que os outros estão trabalhando ou abrir novos problemas.
 
 [![Código agora! (Gitpod)](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/apache/fineract)
-to start contributing to this project in the online web-based IDE GitPod.io right away!
+para começar a contribuir para este projeto no IDE on-line GitPod.io baseado na web imediatamente!
 (You may initially have to press F1 to Find Command and run "Java: Start Language Server".)
 It's of course also possible to contribute with a "traditional" local development environment (see below).
 
