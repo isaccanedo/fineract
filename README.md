@@ -5,7 +5,7 @@ Apache Fineract: uma plataforma para microfinanças
 
 O Fineract é uma plataforma madura com APIs abertas que fornece uma solução de core banking confiável, robusta e acessível para instituições financeiras que oferecem serviços aos 3 bilhões de subbancários e não bancários do mundo.
 
-[Dê uma olhada no FAQ em nosso Wiki em apache.org](https://cwiki.apache.org/confluence/display/FINERACT/FAQ) if this README does not answer what you are looking for.  [Visit our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) to find issues to work on, see what others are working on, or open new issues.
+[Dê uma olhada no FAQ em nosso Wiki em apache.org](https://cwiki.apache.org/confluence/display/FINERACT/FAQ) se este README não responder o que você está procurando.  [Visit our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) to find issues to work on, see what others are working on, or open new issues.
 
 [![Code Now! (Gitpod)](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/apache/fineract)
 to start contributing to this project in the online web-based IDE GitPod.io right away!
