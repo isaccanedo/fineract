@@ -27,7 +27,7 @@ Você pode executar a versão necessária do servidor de banco de dados em um co
 
     docker run --name mariadb-10.9 -p 3306:3306 -e MARIADB_ROOT_PASSWORD=mysql -d mariadb:10.9
 
-and stop and destroy it like this:
+e pare e destrua assim:
 
     docker rm -f mariadb-10.9
 
