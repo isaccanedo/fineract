@@ -61,7 +61,7 @@ If a previously used Fineract instance didn't run in UTC (backward compatibility
 
 __RECOMMENDATION__: you need to shift all dates in your database by the timezone offset that your Fineract instance used.
 
-Instructions how to run for local development
+Instruções de como concorrer ao desenvolvimento local
 ============
 
 Run the following commands:
