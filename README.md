@@ -70,7 +70,7 @@ Run the following commands:
 1. `./gradlew bootRun`
 
 
-Instructions to build the JAR file
+Instruções para construir o arquivo JAR
 ============
 1. Clone the repository or download and extract the archive file to your local directory.
 2. Run `./gradlew clean bootJar` to build a modern cloud native fully self contained JAR file which will be created at `fineract-provider/build/libs` directory.
