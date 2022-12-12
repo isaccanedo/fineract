@@ -51,7 +51,7 @@ __DO__: Se você usar o MySQL como seu banco de dados Fineract, a seguinte confi
 
 __DON'T__: Caso a instância do Fineract e o servidor MySQL __not__ sejam executados em UTC, pode acontecer o seguinte:
 
-* MySQL is saving date time values differently from PostgreSQL
+* O MySQL está salvando valores de data e hora de maneira diferente do PostgreSQL
 * Example scenario: if the Fineract instance runs in timezone: GMT+2, and the local date time is 2022-08-11 17:15 ...
 * ... then __PostgreSQL saves__ the LocalDateTime as is: __2022-08-11 17:15__
 * ... and __MySQL saves__ the LocalDateTime in UTC: __2022-08-11 15:15__
