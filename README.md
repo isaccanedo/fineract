@@ -49,7 +49,7 @@ __DO__: Se você usar o MySQL como seu banco de dados Fineract, a seguinte confi
 * Execute o aplicativo em UTC (a linha de comando padrão em nossa imagem do Docker já possui os parâmetros necessários)
 * Execute o servidor de banco de dados MySQL em UTC (se você usar serviços gerenciados como AWS RDS, esse deve ser o padrão de qualquer maneira, mas seria bom verificar novamente)
 
-__DON'T__: In case the Fineract instance and the MySQL server are __not__ running in UTC then the following could happen:
+__DON'T__: Caso a instância do Fineract e o servidor MySQL __not__ sejam executados em UTC, pode acontecer o seguinte:
 
 * MySQL is saving date time values differently from PostgreSQL
 * Example scenario: if the Fineract instance runs in timezone: GMT+2, and the local date time is 2022-08-11 17:15 ...
