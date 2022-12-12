@@ -46,7 +46,7 @@ serverTimezone=UTC&useLegacyDatetimeCode=false&sessionVariables=time_zone=‘-00
 
 __DO__: Se você usar o MySQL como seu banco de dados Fineract, a seguinte configuração é altamente recomendada:
 
-* Run the application in UTC (the default command line in our Docker image has the necessary parameters already set)
+* Execute o aplicativo em UTC (a linha de comando padrão em nossa imagem do Docker já possui os parâmetros necessários)
 * Run the MySQL database server in UTC (if you use managed services like AWS RDS then this should be the default anyway, but it would be good to double-check)
 
 __DON'T__: In case the Fineract instance and the MySQL server are __not__ running in UTC then the following could happen:
