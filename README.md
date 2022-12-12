@@ -64,7 +64,7 @@ __RECOMMENDATION__: você precisa mudar todas as datas em seu banco de dados pel
 Instruções de como concorrer ao desenvolvimento local
 ============
 
-Run the following commands:
+Execute os seguintes comandos:
 1. `./gradlew createDB -PdbName=fineract_tenants`
 1. `./gradlew createDB -PdbName=fineract_default`
 1. `./gradlew bootRun`
