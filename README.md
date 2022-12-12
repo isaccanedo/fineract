@@ -74,8 +74,8 @@ Instruções para construir o arquivo JAR
 ============
 1. Clone o repositório ou baixe e extraia o arquivo compactado para seu diretório local.
 2. Execute `./gradlew clean bootJar` para criar um arquivo JAR totalmente independente nativo da nuvem moderna que será criado no diretório `fineract-provider/build/libs`.
-3. As we are not allowed to include a JDBC driver in the built JAR, download a JDBC driver of your choice. For example: `wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.5/mariadb-java-client-2.7.5.jar`
-4. Start the jar and pass the directory where you have downloaded the JDBC driver as loader.path, for example: `java -Dloader.path=. -jar fineract-provider/build/libs/fineract-provider.jar` (does not require external Tomcat)
+3. Como não temos permissão para incluir um driver JDBC no JAR integrado, baixe um driver JDBC de sua escolha. Por exemplo: `wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.5/mariadb-java-client-2.7.5.jar`
+4. Inicie o jar e passe o diretório onde você baixou o driver JDBC como loader.path, por exemplo: `java -Dloader.path=. -jar fineract-provider/build/libs/fineract-provider.jar` (não requer Tomcat externo)
 
 NOTA: ainda não podemos atualizar para a versão 3.0.x do driver MariaDB; tem que esperar até 3.0.4 sair para uma correção de bug.
 
