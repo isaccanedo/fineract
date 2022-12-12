@@ -35,7 +35,7 @@ Esteja ciente de que este banco de dados de contêiner de banco de dados mantém
 
 O Tomcat v9 é necessário apenas se você deseja implantar o Fineract WAR em um contêiner de servlet externo separado. Observe que você não precisa instalar o Tomcat para desenvolver o Fineract ou executá-lo na produção se usar o JAR independente, que incorpora de forma transparente um contêiner de servlet usando o Spring Boot. (Até o FINERACT-730, o Tomcat 7/8 também era suportado, mas agora o Tomcat 9 é necessário.)
 
-IMPORTANT: if you use MySQL or MariaDB
+IMPORTANTE: se você usa MySQL ou MariaDB
 ============
 
 Recently (after release 1.7.0) we introduced improved date time handling in Fineract. Date time is from now on stored in UTC and we are enforcing UTC timezone even on the JDBC driver, e. g. for MySQL:
