@@ -38,7 +38,7 @@ O Tomcat v9 é necessário apenas se você deseja implantar o Fineract WAR em um
 IMPORTANTE: se você usa MySQL ou MariaDB
 ============
 
-Recentemente (após a versão 1.7.0), introduzimos um tratamento aprimorado de data e hora no Fineract. Date time is from now on stored in UTC and we are enforcing UTC timezone even on the JDBC driver, e. g. for MySQL:
+Recentemente (após a versão 1.7.0), introduzimos um tratamento aprimorado de data e hora no Fineract. A partir de agora, a data e a hora são armazenadas em UTC e estamos aplicando o fuso horário UTC mesmo no driver JDBC, por exemplo. g. para MySQL:
 
 ```
 serverTimezone=UTC&useLegacyDatetimeCode=false&sessionVariables=time_zone=‘-00:00’
