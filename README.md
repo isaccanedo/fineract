@@ -57,7 +57,7 @@ __DON'T__: Caso a instância do Fineract e o servidor MySQL __not__ sejam execut
 * ... and __MySQL saves__ the LocalDateTime in UTC: __2022-08-11 15:15__
 * ... but when we __read__ the date time from PostgreSQL __or__ from MySQL, then both systems give us the same values: __2022-08-11 17:15 GMT+2__
 
-If a previously used Fineract instance didn't run in UTC (backward compatibility), then all prior dates will be read wrongly by MySQL/MariaDB. This can cause issues when you run the database migration scripts.
+Se uma instância do Fineract usada anteriormente não foi executada em UTC (compatibilidade com versões anteriores), todas as datas anteriores serão lidas incorretamente pelo MySQL/MariaDB. This can cause issues when you run the database migration scripts.
 
 __RECOMMENDATION__: you need to shift all dates in your database by the timezone offset that your Fineract instance used.
 
