@@ -54,7 +54,7 @@ __DON'T__: Caso a instância do Fineract e o servidor MySQL __not__ sejam execut
 * O MySQL está salvando valores de data e hora de maneira diferente do PostgreSQL
 * Cenário de exemplo: se a instância do Fineract for executada no fuso horário: GMT+2 e a data e hora local for 2022-08-11 17:15 ...
 * ... então __PostgreSQL saves__ o LocalDateTime como está: __2022-08-11 17:15__
-* ... and __MySQL saves__ the LocalDateTime in UTC: __2022-08-11 15:15__
+* ... e __MySQL saves__ o LocalDateTime em UTC: __2022-08-11 15:15__
 * ... but when we __read__ the date time from PostgreSQL __or__ from MySQL, then both systems give us the same values: __2022-08-11 17:15 GMT+2__
 
 Se uma instância do Fineract usada anteriormente não foi executada em UTC (compatibilidade com versões anteriores), todas as datas anteriores serão lidas incorretamente pelo MySQL/MariaDB.Isso pode causar problemas ao executar os scripts de migração do banco de dados.
