@@ -59,7 +59,7 @@ __DON'T__: Caso a instância do Fineract e o servidor MySQL __not__ sejam execut
 
 Se uma instância do Fineract usada anteriormente não foi executada em UTC (compatibilidade com versões anteriores), todas as datas anteriores serão lidas incorretamente pelo MySQL/MariaDB.Isso pode causar problemas ao executar os scripts de migração do banco de dados.
 
-__RECOMMENDATION__: you need to shift all dates in your database by the timezone offset that your Fineract instance used.
+__RECOMMENDATION__: você precisa mudar todas as datas em seu banco de dados pelo deslocamento de fuso horário que sua instância Fineract usou.
 
 Instruções de como concorrer ao desenvolvimento local
 ============
