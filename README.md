@@ -73,7 +73,7 @@ Execute os seguintes comandos:
 Instruções para construir o arquivo JAR
 ============
 1. Clone o repositório ou baixe e extraia o arquivo compactado para seu diretório local.
-2. Run `./gradlew clean bootJar` to build a modern cloud native fully self contained JAR file which will be created at `fineract-provider/build/libs` directory.
+2. Execute `./gradlew clean bootJar` para criar um arquivo JAR totalmente independente nativo da nuvem moderna que será criado no diretório `fineract-provider/build/libs`.
 3. As we are not allowed to include a JDBC driver in the built JAR, download a JDBC driver of your choice. For example: `wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.5/mariadb-java-client-2.7.5.jar`
 4. Start the jar and pass the directory where you have downloaded the JDBC driver as loader.path, for example: `java -Dloader.path=. -jar fineract-provider/build/libs/fineract-provider.jar` (does not require external Tomcat)
 
