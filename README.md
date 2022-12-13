@@ -79,7 +79,7 @@ Instruções para construir o arquivo JAR
 
 NOTA: ainda não podemos atualizar para a versão 3.0.x do driver MariaDB; tem que esperar até 3.0.4 sair para uma correção de bug.
 
-The tenants database connection details are configured [via environment variables (as with Docker container)](#instructions-to-run-using-docker-and-docker-compose), e.g. like this:
+Os detalhes da conexão do banco de dados dos locatários são configurados [por meio de variáveis de ambiente (como no contêiner do Docker)](#instructions-to-run-using-docker-and-docker-compose), por exemplo assim:
 
     export FINERACT_HIKARI_PASSWORD=verysecret
     ...
