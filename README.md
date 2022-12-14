@@ -86,7 +86,7 @@ Os detalhes da conexão do banco de dados dos locatários são configurados [por
     java -jar fineract-provider.jar
 
 
-Security
+Segurança
 ============
 NOTE: The HTTP Basic and OAuth2 authentication schemes are mutually exclusive. You can't enable them both at the same time. Fineract checks these settings on startup and will fail if more than one authentication scheme is enabled.
 
