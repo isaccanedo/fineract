@@ -88,7 +88,7 @@ Os detalhes da conexão do banco de dados dos locatários são configurados [por
 
 Segurança
 ============
-NOTE: The HTTP Basic and OAuth2 authentication schemes are mutually exclusive. You can't enable them both at the same time. Fineract checks these settings on startup and will fail if more than one authentication scheme is enabled.
+NOTA: Os esquemas de autenticação HTTP Basic e OAuth2 são mutuamente exclusivos. Você não pode habilitar os dois ao mesmo tempo. O Fineract verifica essas configurações na inicialização e falhará se mais de um esquema de autenticação estiver ativado.
 
 HTTP Basic Authentication
 ------------
