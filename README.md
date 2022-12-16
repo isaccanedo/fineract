@@ -124,7 +124,7 @@ Você também pode ativar a autenticação 2FA. Dependendo de como você inicia 
 ```
 FINERACT_SECURITY_2FA_ENABLED=true
 ```
-2. Use JVM parameter (best choice if you run the Spring Boot JAR):
+2. Use o parâmetro JVM (melhor escolha se você executar o Spring Boot JAR):
 ```
 -Dfineract.security.2fa.enabled=true
 ```
