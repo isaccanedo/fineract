@@ -145,7 +145,7 @@ Instruções para executar testes de integração
 ============
 > Observe que, se esta for a primeira vez que você acessa o banco de dados MySQL, talvez seja necessário redefinir sua senha.
 
-Run the following commands:
+Execute os seguintes comandos:
 1. `./gradlew createDB -PdbName=fineract_tenants`
 1. `./gradlew createDB -PdbName=fineract_default`
 1. `./gradlew clean test`
