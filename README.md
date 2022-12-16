@@ -154,8 +154,8 @@ Execute os seguintes comandos:
 Instruções para executar e depurar no Eclipse IDE
 ============
 
-It is possible to run Fineract in Eclipse IDE and also to debug Fineract using Eclipse's debugging facilities.
-To do this, you need to create the Eclipse project files and import the project into an Eclipse workspace:
+É possível executar o Fineract no Eclipse IDE e também depurar o Fineract usando os recursos de depuração do Eclipse.
+Para fazer isso, você precisa criar os arquivos do projeto Eclipse e importar o projeto para um espaço de trabalho Eclipse:
 
 1. Create Eclipse project files into the Fineract project by running `./gradlew cleanEclipse eclipse`
 2. Import the fineract-provider project into your Eclipse workspace (File->Import->General->Existing Projects into Workspace, choose root directory fineract/fineract-provider)
