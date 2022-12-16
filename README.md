@@ -141,7 +141,7 @@ Recomendamos usar o JAR em vez da implantação do arquivo WAR, porque é muito 
 Note that with the 1.4 release the tenants database pool configuration changed from Tomcat DBCP in XML to an embedded Hikari, configured by environment variables, see above.
 
 
-Instructions to execute Integration Tests
+Instruções para executar testes de integração
 ============
 > Note that if this is the first time to access MySQL DB, then you may need to reset your password.
 
