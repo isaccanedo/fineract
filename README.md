@@ -132,7 +132,7 @@ FINERACT_SECURITY_2FA_ENABLED=true
 
 Instructions to build a WAR file
 ============
-1. Clone the repository or download and extract the archive file to your local directory.
+1. Clone o repositório ou baixe e extraia o arquivo compactado para seu diretório local.
 2. Run `./gradlew :fineract-war:clean :fineract-war:war` to build a traditional WAR file which will be created at `fineract-war/build/libs` directory.
 3. Deploy this WAR to your Tomcat v9 Servlet Container.
 
