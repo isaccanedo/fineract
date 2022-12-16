@@ -143,7 +143,7 @@ Observe que, com a versão 1.4, a configuração do pool de banco de dados de lo
 
 Instruções para executar testes de integração
 ============
-> Note that if this is the first time to access MySQL DB, then you may need to reset your password.
+> Observe que, se esta for a primeira vez que você acessa o banco de dados MySQL, talvez seja necessário redefinir sua senha.
 
 Run the following commands:
 1. `./gradlew createDB -PdbName=fineract_tenants`
