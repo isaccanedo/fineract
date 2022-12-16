@@ -118,7 +118,7 @@ java -Dfineract.security.basicauth.enabled=false -Dfineract.security.oauth.enabl
 
 Autenticação de dois fatores
 ------------
-You can also enable 2FA authentication. Depending on how you start Fineract add the following:
+Você também pode ativar a autenticação 2FA. Dependendo de como você inicia o Fineract, adicione o seguinte:
 
 1. Use environment variable (best choice if you run with Docker Compose):
 ```
