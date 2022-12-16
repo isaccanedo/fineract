@@ -120,7 +120,7 @@ Autenticação de dois fatores
 ------------
 Você também pode ativar a autenticação 2FA. Dependendo de como você inicia o Fineract, adicione o seguinte:
 
-1. Use environment variable (best choice if you run with Docker Compose):
+1. Use a variável de ambiente (melhor escolha se você executar com o Docker Compose):
 ```
 FINERACT_SECURITY_2FA_ENABLED=true
 ```
