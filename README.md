@@ -111,7 +111,7 @@ Há também um esquema de autenticação OAuth2 disponível. Novamente, duas man
 FINERACT_SECURITY_BASICAUTH_ENABLED=false
 FINERACT_SECURITY_OAUTH_ENABLED=true
 ```
-2. Use JVM parameters (best choice if you run the Spring Boot JAR):
+2. Use parâmetros JVM (melhor escolha se você executar o Spring Boot JAR):
 ```
 java -Dfineract.security.basicauth.enabled=false -Dfineract.security.oauth.enabled=true -jar fineract-provider.jar
 ```
