@@ -98,7 +98,7 @@ Por padrão, o Fineract é configurado com um esquema de autenticação básica 
 FINERACT_SECURITY_BASICAUTH_ENABLED=true
 FINERACT_SECURITY_OAUTH_ENABLED=false
 ```
-2. Use JVM parameters (best choice if you run the Spring Boot JAR):
+2. Use os parâmetros da JVM (melhor escolha se você executar o Spring Boot JAR):
 ```
 java -Dfineract.security.basicauth.enabled=true -Dfineract.security.oauth.enabled=false -jar fineract-provider.jar
 ```
