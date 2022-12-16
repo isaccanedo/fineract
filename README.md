@@ -116,7 +116,7 @@ FINERACT_SECURITY_OAUTH_ENABLED=true
 java -Dfineract.security.basicauth.enabled=false -Dfineract.security.oauth.enabled=true -jar fineract-provider.jar
 ```
 
-Two Factor Authentication
+Autenticação de dois fatores
 ------------
 You can also enable 2FA authentication. Depending on how you start Fineract add the following:
 
