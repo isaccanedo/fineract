@@ -151,7 +151,7 @@ Run the following commands:
 1. `./gradlew clean test`
 
 
-Instructions to run and debug in Eclipse IDE
+Instruções para executar e depurar no Eclipse IDE
 ============
 
 It is possible to run Fineract in Eclipse IDE and also to debug Fineract using Eclipse's debugging facilities.
