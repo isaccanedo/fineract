@@ -90,7 +90,7 @@ Segurança
 ============
 NOTA: Os esquemas de autenticação HTTP Basic e OAuth2 são mutuamente exclusivos. Você não pode habilitar os dois ao mesmo tempo. O Fineract verifica essas configurações na inicialização e falhará se mais de um esquema de autenticação estiver ativado.
 
-HTTP Basic Authentication
+Autenticação básica HTTP
 ------------
 Por padrão, o Fineract é configurado com um esquema de autenticação básica HTTP, então você não precisa fazer nada se quiser usá-lo. Mas se você quiser escolher explicitamente esse esquema de autenticação, há duas maneiras de ativá-lo:
 1. Use variáveis de ambiente (melhor escolha se você executar com Docker Compose):
