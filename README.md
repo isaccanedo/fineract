@@ -138,7 +138,7 @@ Instructions to build a WAR file
 
 Recomendamos usar o JAR em vez da implantação do arquivo WAR, porque é muito mais fácil.
 
-Note that with the 1.4 release the tenants database pool configuration changed from Tomcat DBCP in XML to an embedded Hikari, configured by environment variables, see above.
+Observe que, com a versão 1.4, a configuração do pool de banco de dados de locatários mudou de Tomcat DBCP em XML para um Hikari integrado, configurado por variáveis de ambiente, veja acima.
 
 
 Instruções para executar testes de integração
