@@ -106,7 +106,7 @@ java -Dfineract.security.basicauth.enabled=true -Dfineract.security.oauth.enable
 Autenticação OAuth2
 ------------
 Há também um esquema de autenticação OAuth2 disponível. Novamente, duas maneiras de habilitá-lo:
-1. Use environment variables (best choice if you run with Docker Compose):
+1. Use variáveis de ambiente (melhor escolha se você executar com Docker Compose):
 ```
 FINERACT_SECURITY_BASICAUTH_ENABLED=false
 FINERACT_SECURITY_OAUTH_ENABLED=true
