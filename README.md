@@ -169,7 +169,7 @@ You can also use Eclipse Junit support to run tests in Eclipse (Run As->Junit Te
 Finally, modifying source code in Eclipse automatically triggers hot code replace to a running instance, allowing you to immediately test your changes
 
 
-Instructions to run using Docker and docker-compose
+Instruções para executar usando Docker e docker-compose
 ===================================================
 
 It is possible to do a 'one-touch' installation of Fineract using containers (AKA "Docker").
