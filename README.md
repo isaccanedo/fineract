@@ -162,7 +162,7 @@ Para fazer isso, você precisa criar os arquivos do projeto Eclipse e importar o
 3. Do a clean build of the project in Eclipse (Project->Clean...)
 3. Run / debug Fineract by right clicking on org.apache.fineract.ServerApplication class and choosing Run As / Debug As -> Java Application. All normal Eclipse debugging features (breakpoints, watchpoints etc) should work as expected.
 
-If you change the project settings (dependencies etc) in Gradle, you should redo step 1 and refresh the project in Eclipse.
+Se você alterar as configurações do projeto (dependências, etc.) no Gradle, refaça a etapa 1 e atualize o projeto no Eclipse.
 
 You can also use Eclipse Junit support to run tests in Eclipse (Run As->Junit Test)
 
