@@ -177,7 +177,7 @@ Fineract now packs the mifos community-app web UI in it's docker deploy.
 You can now run and test fineract with a GUI directly from the combined docker builds.
 This includes the database running in a container.
 
-As Prerequisites, you must have `docker` and `docker-compose` installed on your machine; see
+Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em sua máquina; 
 [Docker Install](https://docs.docker.com/install/) and
 [Docker Compose Install](https://docs.docker.com/compose/install/).
 
