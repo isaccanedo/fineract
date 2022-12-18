@@ -181,7 +181,7 @@ Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em s
 [Docker Install](https://docs.docker.com/install/) and
 [Docker Compose Install](https://docs.docker.com/compose/install/).
 
-Alternatively, you can also use [Podman](https://github.com/containers/libpod)
+Alternativamente, você também pode usar [Podman](https://github.com/containers/libpod)
 (e.g. via `dnf install podman-docker`), and [Podman Compose](https://github.com/containers/podman-compose/)
 (e.g. via `pip3 install podman-compose`) instead of Docker.
 
