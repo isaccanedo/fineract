@@ -178,7 +178,7 @@ Isso inclui o banco de dados em execução em um contêiner.
 
 Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em sua máquina; 
 [Instalação do Docker](https://docs.docker.com/install/) and
-[Docker Compose Install](https://docs.docker.com/compose/install/).
+[Instalação do Docker Compose](https://docs.docker.com/compose/install/).
 
 Alternativamente, você também pode usar [Podman](https://github.com/containers/libpod)
 (e.g. via `dnf install podman-docker`), and [Podman Compose](https://github.com/containers/podman-compose/)
