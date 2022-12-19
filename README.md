@@ -160,7 +160,7 @@ Para fazer isso, você precisa criar os arquivos do projeto Eclipse e importar o
 1. Crie arquivos de projeto Eclipse no projeto Fineract executando `./gradlew cleanEclipse eclipse`
 2. Import the fineract-provider project into your Eclipse workspace (File->Import->General->Existing Projects into Workspace, choose root directory fineract/fineract-provider)
 3. Faça uma compilação limpa do projeto no Eclipse (Project->Clean...)
-3. Execute / depure o Fineract clicando com o botão direito do mouse na classe org.apache.fineract.ServerApplication e escolhendo Run As / Debug As -> Java Application. All normal Eclipse debugging features (breakpoints, watchpoints etc) should work as expected.
+3. Execute / depure o Fineract clicando com o botão direito do mouse na classe org.apache.fineract.ServerApplication e escolhendo Run As / Debug As -> Java Application. Todos os recursos normais de depuração do Eclipse (pontos de interrupção, pontos de controle, etc.) devem funcionar conforme o esperado.
 
 Se você alterar as configurações do projeto (dependências, etc.) no Gradle, refaça a etapa 1 e atualize o projeto no Eclipse.
 
