@@ -164,7 +164,7 @@ Para fazer isso, você precisa criar os arquivos do projeto Eclipse e importar o
 
 Se você alterar as configurações do projeto (dependências, etc.) no Gradle, refaça a etapa 1 e atualize o projeto no Eclipse.
 
-You can also use Eclipse Junit support to run tests in Eclipse (Run As->Junit Test)
+Você também pode usar o suporte do Eclipse Junit para executar testes no Eclipse (Run As->Junit Test)
 
 Finally, modifying source code in Eclipse automatically triggers hot code replace to a running instance, allowing you to immediately test your changes
 
