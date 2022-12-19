@@ -177,7 +177,7 @@ Agora você pode executar e testar o fineract com uma GUI diretamente das compil
 Isso inclui o banco de dados em execução em um contêiner.
 
 Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em sua máquina; 
-[Docker Install](https://docs.docker.com/install/) and
+[Instalação do Docker](https://docs.docker.com/install/) and
 [Docker Compose Install](https://docs.docker.com/compose/install/).
 
 Alternativamente, você também pode usar [Podman](https://github.com/containers/libpod)
