@@ -184,7 +184,7 @@ Alternativamente, você também pode usar [Podman](https://github.com/containers
 (e.g. via `dnf install podman-docker`), e [Podman Compose](https://github.com/containers/podman-compose/)
 (e.g. via `pip3 install podman-compose`) em vez do Docker.
 
-Now to run a new Fineract instance you can simply:
+Agora, para executar uma nova instância do Fineract, você pode simplesmente:
 
 1. `git clone https://github.com/apache/fineract.git ; cd fineract`
 1. for windows, use `git clone https://github.com/apache/fineract.git --config core.autocrlf=input ; cd fineract`
