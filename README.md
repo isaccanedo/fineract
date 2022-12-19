@@ -130,7 +130,7 @@ FINERACT_SECURITY_2FA_ENABLED=true
 ```
 
 
-Instructions to build a WAR file
+Instruções para criar um arquivo WAR
 ============
 1. Clone o repositório ou baixe e extraia o arquivo compactado para seu diretório local.
 2. Execute `./gradlew :fineract-war:clean :fineract-war:war` para construir um arquivo WAR tradicional que será criado no diretório `fineract-war/build/libs`.
