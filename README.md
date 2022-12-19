@@ -192,7 +192,7 @@ Agora, para executar uma nova instância do Fineract, você pode simplesmente:
 1. `docker-compose up -d`
 1. fineract (back-end) is running at https://localhost:8443/fineract-provider/
 1. Esperar por https://localhost:8443/fineract-provider/actuator/health to return `{"status":"UP"}`
-1. você deve ir para https://localhost:8443 and remember to accept the self-signed SSL certificate of the API once in your browser, otherwise  you get a message that is rather misleading from the UI.
+1. você deve ir para https://localhost:8443 e lembre-se de aceitar o certificado SSL autoassinado da API uma vez em seu navegador, caso contrário, você receberá uma mensagem bastante enganosa da interface do usuário.
 1. community-app (UI) is running at http://localhost:9090/?baseApiUrl=https://localhost:8443/fineract-provider&tenantIdentifier=default
 1. login using default _username_ `mifos` and _password_ `password`
 
