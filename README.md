@@ -196,7 +196,7 @@ Agora, para executar uma nova instância do Fineract, você pode simplesmente:
 1. community-app (UI) está sendo executado em http://localhost:9090/?baseApiUrl=https://localhost:8443/fineract-provider&tenantIdentifier=default
 1. faça login usando o padrão _username_ `mifos` e _password_ `password`
 
-https://hub.docker.com/r/apache/fineract has a pre-built container image of this project, built continuously.
+https://hub.docker.com/r/apache/fineract tem uma imagem de contêiner pré-construída deste projeto, construída continuamente.
 
 You must specify the MySQL tenants database JDBC URL by passing it to the `fineract` container via environment
 variables; please consult the [`docker-compose.yml`](docker-compose.yml) for exact details how to specify those.
