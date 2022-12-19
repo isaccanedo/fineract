@@ -187,7 +187,7 @@ Alternativamente, você também pode usar [Podman](https://github.com/containers
 Agora, para executar uma nova instância do Fineract, você pode simplesmente:
 
 1. `git clone https://github.com/apache/fineract.git ; cd fineract`
-1. for windows, use `git clone https://github.com/apache/fineract.git --config core.autocrlf=input ; cd fineract`
+1. para Windows, use `git clone https://github.com/apache/fineract.git --config core.autocrlf=input ; cd fineract`
 1. `./gradlew :fineract-provider:jibDockerBuild -x test`
 1. `docker-compose up -d`
 1. fineract (back-end) is running at https://localhost:8443/fineract-provider/
