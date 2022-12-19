@@ -166,8 +166,7 @@ Se você alterar as configurações do projeto (dependências, etc.) no Gradle, 
 
 Você também pode usar o suporte do Eclipse Junit para executar testes no Eclipse (Run As->Junit Test)
 
-Finally, modifying source code in Eclipse automatically triggers hot code replace to a running instance, allowing you to immediately test your changes
-
+Por fim, a modificação do código-fonte no Eclipse aciona automaticamente a substituição do código quente para uma instância em execução, permitindo que você teste imediatamente suas alterações
 
 Instruções para executar usando Docker e docker-compose
 ===================================================
