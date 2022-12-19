@@ -182,7 +182,7 @@ Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em s
 
 Alternativamente, você também pode usar [Podman](https://github.com/containers/libpod)
 (e.g. via `dnf install podman-docker`), e [Podman Compose](https://github.com/containers/podman-compose/)
-(e.g. via `pip3 install podman-compose`) instead of Docker.
+(e.g. via `pip3 install podman-compose`) em vez do Docker.
 
 Now to run a new Fineract instance you can simply:
 
