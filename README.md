@@ -173,7 +173,7 @@ Instruções para executar usando Docker e docker-compose
 
 É possível fazer uma instalação 'one-touch' do Fineract usando containers (AKA "Docker").
 O Fineract agora inclui a interface do usuário da web do aplicativo da comunidade mifos em sua implantação do docker.
-You can now run and test fineract with a GUI directly from the combined docker builds.
+Agora você pode executar e testar o fineract com uma GUI diretamente das compilações do docker combinadas.
 This includes the database running in a container.
 
 Como Pré-requisitos, você deve ter `docker` e `docker-compose` instalados em sua máquina; 
