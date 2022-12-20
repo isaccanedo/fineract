@@ -198,8 +198,8 @@ Agora, para executar uma nova instância do Fineract, você pode simplesmente:
 
 https://hub.docker.com/r/apache/fineract tem uma imagem de contêiner pré-construída deste projeto, construída continuamente.
 
-You must specify the MySQL tenants database JDBC URL by passing it to the `fineract` container via environment
-variables; please consult the [`docker-compose.yml`](docker-compose.yml) for exact details how to specify those.
+Você deve especificar o URL JDBC do banco de dados de locatários MySQL passando-o para o contêiner `fineract` por meio de variáveis de ambiente; 
+please consult the [`docker-compose.yml`](docker-compose.yml) for exact details how to specify those.
 _(Note that in previous versions, the `mysqlserver` environment variable used at `docker build` time instead of at
 `docker run` time did something similar; this has changed in [FINERACT-773](https://issues.apache.org/jira/browse/FINERACT-773)),
 and the `mysqlserver` environment variable is now no longer supported.)_
