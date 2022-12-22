@@ -208,7 +208,7 @@ and the `mysqlserver` environment variable is now no longer supported.)_
 Configuração do pool de conexões
 =============================
 
-Verifique `application.properties` para ver quais configurações do pool de conexão podem ser ajustadas. The associated environment variables are prefixed with `FINERACT_HIKARI_*`. You can find more information about specific connection pool settings (Hikari) at https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
+Verifique `application.properties` para ver quais configurações do pool de conexão podem ser ajustadas. As variáveis de ambiente associadas são prefixadas com `FINERACT_HIKARI_*`. You can find more information about specific connection pool settings (Hikari) at https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
 
 NOTE: we'll keep backwards compatibility until one of the next releases to ensure that things are working as expected. Environment variables prefixed `fineract_tenants_*` can still be used to configure the database connection, but we strongly encourage using `FINERACT_HIKARI_*` with more options.
 
