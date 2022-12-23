@@ -212,7 +212,7 @@ Verifique `application.properties` para ver quais configurações do pool de con
 
 NOTA: manteremos a compatibilidade com versões anteriores até um dos próximos lançamentos para garantir que tudo esteja funcionando conforme o esperado. As variáveis de ambiente prefixadas `fineract_tenants_*` ainda podem ser usadas para configurar a conexão com o banco de dados, mas recomendamos fortemente o uso de `FINERACT_HIKARI_*` com mais opções.
 
-SSL configuration
+Configuração SSL
 =================
 
 Leia também [o documento relacionado ao HTTPS](fineract-doc/src/docs/en/deployment.adoc#https).
