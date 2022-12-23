@@ -227,7 +227,7 @@ Configuração do Tomcat
 Consulte `application.properties` e a documentação oficial do Spring Boot (https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) sobre como fazer o ajuste de desempenho para Tomcat. Nota: você pode definir agora o tamanho aceitável do POST do formulário (o padrão é 2 MB) por meio da variável de ambiente `FINERACT_SERVER_TOMCAT_MAX_HTTP_FORM_POST_SIZE`.
 
 
-Instructions to run on Kubernetes
+Instruções para executar no Kubernetes
 =================================
 
 General Clusters
