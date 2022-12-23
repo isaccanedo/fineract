@@ -237,7 +237,7 @@ Você também pode executar o Fineract usando contêineres em um cluster Kuberne
 Certifique-se de configurar e conectar-se ao seu cluster Kubernetes.
 Você pode seguir [este](https://cwiki.apache.org/confluence/display/FINERACT/Install+and+configure+kubectl+and+Google+Cloud+SDK+on+ubuntu+16.04) guia para configurar um Cluster do Kubernetes no GKE.Certifique-se de substituir `apache-fineract-cn` por `apache-fineract`
 
-Now e.g. from your Google Cloud shell, run the following commands:
+Agora, por exemplo no shell do Google Cloud, execute os seguintes comandos:
 
 1. `git clone https://github.com/apache/fineract.git ; cd fineract/kubernetes`
 1. `./kubectl-startup.sh`
