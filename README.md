@@ -246,7 +246,7 @@ Para desligar e redefinir seu Cluster, execute:
 
     ./kubectl-shutdown.sh
 
-Using Minikube
+Usando o Minikube
 --------------
 
 Alternatively, you can run fineract on a local kubernetes cluster using [minikube](https://minikube.sigs.k8s.io/docs/).
