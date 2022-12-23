@@ -224,7 +224,7 @@ Agora você pode escolher facilmente um armazenamento de chaves SSL diferente de
 Configuração do Tomcat
 ====================
 
-Please refer to the `application.properties` and the official Spring Boot documentation (https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) on how to do performance tuning for Tomcat. Note: you can set now the acceptable form POST size (default is 2MB) via environment variable `FINERACT_SERVER_TOMCAT_MAX_HTTP_FORM_POST_SIZE`.
+Consulte `application.properties` e a documentação oficial do Spring Boot (https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) sobre como fazer o ajuste de desempenho para Tomcat. Note: you can set now the acceptable form POST size (default is 2MB) via environment variable `FINERACT_SERVER_TOMCAT_MAX_HTTP_FORM_POST_SIZE`.
 
 
 Instructions to run on Kubernetes
