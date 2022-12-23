@@ -249,7 +249,7 @@ Para desligar e redefinir seu Cluster, execute:
 Usando o Minikube
 --------------
 
-Alternatively, you can run fineract on a local kubernetes cluster using [minikube](https://minikube.sigs.k8s.io/docs/).
+Como alternativa, você pode executar o fineract em um cluster kubernetes local usando [minikube](https://minikube.sigs.k8s.io/docs/).
 As Prerequisites, you must have `minikube` and `kubectl` installed on your machine; see
 [Minikube & Kubectl install](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
