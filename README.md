@@ -217,7 +217,7 @@ Configuração SSL
 
 Leia também [o documento relacionado ao HTTPS](fineract-doc/src/docs/en/deployment.adoc#https).
 
-Por padrão, o SSL está ativado, mas todas as propriedades relacionadas ao SSL agora são ajustáveis. SSL can be turned off by setting the environment variable `FINERACT_SERVER_SSL_ENABLED` to false. If you do that then please make sure to also change the server port to `8080` via the variable `FINERACT_SERVER_PORT`, just for the sake of keeping the conventions.
+Por padrão, o SSL está ativado, mas todas as propriedades relacionadas ao SSL agora são ajustáveis. O SSL pode ser desativado definindo a variável de ambiente `FINERACT_SERVER_SSL_ENABLED` como false. If you do that then please make sure to also change the server port to `8080` via the variable `FINERACT_SERVER_PORT`, just for the sake of keeping the conventions.
 You can choose now easily a different SSL keystore by setting `FINERACT_SERVER_SSL_KEY_STORE` with a path to a different (not embedded) keystore. The password can be set via `FINERACT_SERVER_SSL_KEY_STORE_PASSWORD`. See the `application.properties` file and the latest Spring Boot documentation (https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html) for more details.
 
 
