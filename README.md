@@ -242,7 +242,7 @@ Agora, por exemplo no shell do Google Cloud, execute os seguintes comandos:
 1. `git clone https://github.com/apache/fineract.git ; cd fineract/kubernetes`
 1. `./kubectl-startup.sh`
 
-To shutdown and reset your Cluster, run:
+Para desligar e redefinir seu Cluster, execute:
 
     ./kubectl-shutdown.sh
 
