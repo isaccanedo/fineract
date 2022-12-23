@@ -210,7 +210,7 @@ Configuração do pool de conexões
 
 Verifique `application.properties` para ver quais configurações do pool de conexão podem ser ajustadas. As variáveis de ambiente associadas são prefixadas com `FINERACT_HIKARI_*`. You can find more information about specific connection pool settings (Hikari) at https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
 
-NOTA: manteremos a compatibilidade com versões anteriores até um dos próximos lançamentos para garantir que tudo esteja funcionando conforme o esperado. Environment variables prefixed `fineract_tenants_*` can still be used to configure the database connection, but we strongly encourage using `FINERACT_HIKARI_*` with more options.
+NOTA: manteremos a compatibilidade com versões anteriores até um dos próximos lançamentos para garantir que tudo esteja funcionando conforme o esperado. As variáveis de ambiente prefixadas `fineract_tenants_*` ainda podem ser usadas para configurar a conexão com o banco de dados, mas recomendamos fortemente o uso de `FINERACT_HIKARI_*` com mais opções.
 
 SSL configuration
 =================
