@@ -230,7 +230,7 @@ Consulte `application.properties` e a documentação oficial do Spring Boot (htt
 Instruções para executar no Kubernetes
 =================================
 
-General Clusters
+Clusters gerais
 ----------------
 
 You can also run Fineract using containers on a Kubernetes cluster.
