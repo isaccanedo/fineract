@@ -158,7 +158,7 @@ Instruções para executar e depurar no Eclipse IDE
 Para fazer isso, você precisa criar os arquivos do projeto Eclipse e importar o projeto para um espaço de trabalho Eclipse:
 
 1. Crie arquivos de projeto Eclipse no projeto Fineract executando `./gradlew cleanEclipse eclipse`
-2. Import the fineract-provider project into your Eclipse workspace (File->Import->General->Existing Projects into Workspace, choose root directory fineract/fineract-provider)
+2. Importe o projeto fineract-provider para sua área de trabalho do Eclipse (File->Import->General->Existing Projects into Workspace, choose root directory fineract/fineract-provider)
 3. Faça uma compilação limpa do projeto no Eclipse (Project->Clean...)
 3. Execute / depure o Fineract clicando com o botão direito do mouse na classe org.apache.fineract.ServerApplication e escolhendo Run As / Debug As -> Java Application. Todos os recursos normais de depuração do Eclipse (pontos de interrupção, pontos de controle, etc.) devem funcionar conforme o esperado.
 
@@ -210,7 +210,7 @@ Configuração do pool de conexões
 
 Verifique `application.properties` para ver quais configurações do pool de conexão podem ser ajustadas. As variáveis de ambiente associadas são prefixadas com `FINERACT_HIKARI_*`. You can find more information about specific connection pool settings (Hikari) at https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
 
-NOTE: we'll keep backwards compatibility until one of the next releases to ensure that things are working as expected. Environment variables prefixed `fineract_tenants_*` can still be used to configure the database connection, but we strongly encourage using `FINERACT_HIKARI_*` with more options.
+NOTA: manteremos a compatibilidade com versões anteriores até um dos próximos lançamentos para garantir que tudo esteja funcionando conforme o esperado. Environment variables prefixed `fineract_tenants_*` can still be used to configure the database connection, but we strongly encourage using `FINERACT_HIKARI_*` with more options.
 
 SSL configuration
 =================
