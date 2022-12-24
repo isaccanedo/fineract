@@ -267,7 +267,7 @@ Para verificar o status de seus contêineres em seu cluster minikube Kubernetes 
 
     minikube dashboard
 
-You can check Fineract logs using:
+Você pode verificar os logs do Fineract usando:
 
     kubectl logs deployment/fineract-server
 
