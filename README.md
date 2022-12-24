@@ -263,7 +263,7 @@ Now to run a new Fineract instance on Minikube you can simply:
 
     http --verify=no --timeout 240 --check-status get $(minikube service fineract-server --url --https)/fineract-provider/actuator/health
 
-To check the status of your containers on your local minikube Kubernetes cluster, run:
+Para verificar o status de seus contêineres em seu cluster minikube Kubernetes local, execute:
 
     minikube dashboard
 
