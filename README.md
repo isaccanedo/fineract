@@ -259,7 +259,7 @@ Now to run a new Fineract instance on Minikube you can simply:
 1. `minikube start`
 1. `./kubectl-startup.sh`
 1. `minikube service fineract-server --url --https`
-1. Fineract is now running at the printed URL (note HTTP), which you can check e.g. using:
+1. O Fineract agora está sendo executado no URL impresso (observe HTTP), que você pode verificar, por exemplo, usando:
 
     http --verify=no --timeout 240 --check-status get $(minikube service fineract-server --url --https)/fineract-provider/actuator/health
 
