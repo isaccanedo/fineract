@@ -253,7 +253,7 @@ Como alternativa, você pode executar o fineract em um cluster kubernetes local 
 As Prerequisites, you must have `minikube` and `kubectl` installed on your machine; see
 [Minikube & Kubectl install](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
-Now to run a new Fineract instance on Minikube you can simply:
+Agora, para executar uma nova instância do Fineract no Minikube, você pode simplesmente:
 
 1. `git clone https://github.com/apache/fineract.git ; cd fineract/kubernetes`
 1. `minikube start`
