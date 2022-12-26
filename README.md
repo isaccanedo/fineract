@@ -275,7 +275,7 @@ Para desligar e redefinir seu cluster, execute:
 
     ./kubectl-shutdown.sh
 
-To shutdown and reset your cluster, run:
+Para desligar e redefinir seu cluster, execute:
 
     minikube ssh
 
