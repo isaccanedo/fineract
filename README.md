@@ -284,7 +284,7 @@ Para desligar e redefinir seu cluster, execute:
 Temos [alguns problemas em aberto no JIRA com ideias de aprimoramento relacionadas ao Kubernetes](https://jira.apache.org/jira/browse/FINERACT-783?jql=labels%20%3D%20kubernetes%20AND%20project%20%3D%20%22Apache%20Fineract%22%20) which you are welcome to contribute to.
 
 
-Instructions to download Gradle wrapper
+Instruções para baixar o wrapper do Gradle
 ============
 The file gradle/wrapper/gradle-wrapper.jar binary is checked into this projects Git source repository,
 but won't exist in your copy of the Fineract codebase if you downloaded a released source archive from apache.org.
