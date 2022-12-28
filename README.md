@@ -297,7 +297,7 @@ Nesse caso, você precisa baixá-lo usando os comandos abaixo:
     curl --insecure -L https://github.com/apache/fineract/raw/develop/gradle/wrapper/gradle-wrapper.jar > gradle/wrapper/gradle-wrapper.jar
 
 
-Instructions to run Apache RAT (Release Audit Tool)
+Instruções para executar o Apache RAT (ferramenta de auditoria de lançamento)
 ============
 1. Extract the archive file to your local directory.
 2. Run `./gradlew rat`. A report will be generated under build/reports/rat/rat-report.txt
