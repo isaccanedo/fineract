@@ -286,9 +286,9 @@ Temos [alguns problemas em aberto no JIRA com ideias de aprimoramento relacionad
 
 Instruções para baixar o wrapper do Gradle
 ============
-The file gradle/wrapper/gradle-wrapper.jar binary is checked into this projects Git source repository,
-but won't exist in your copy of the Fineract codebase if you downloaded a released source archive from apache.org.
-In that case, you need to download it using the commands below:
+O arquivo binário gradle/wrapper/gradle-wrapper.jar é verificado no repositório de origem Git do projeto,
+mas não existirá em sua cópia da base de código Fineract se você baixou um arquivo de origem liberado de apache.org.
+Nesse caso, você precisa baixá-lo usando os comandos abaixo:
 
     wget --no-check-certificate -P gradle/wrapper https://github.com/apache/fineract/raw/develop/gradle/wrapper/gradle-wrapper.jar
 
