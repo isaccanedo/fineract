@@ -305,8 +305,7 @@ Instruções para executar o Apache RAT (ferramenta de auditoria de lançamento)
 
 Instruções para ativar o ActiveMQ
 ============
-Messaging configuration is disabled by default. If you want to enable it and register some message listeners, application needs to be started with the proper Spring profile, ie `-Dspring.profiles.active=activeMqEnabled` (or one of the other Spring ways to configure it).
-
+A configuração de mensagens é desativada por padrão. Se você quiser ativá-lo e registrar alguns ouvintes de mensagens, o aplicativo precisa ser iniciado com o perfil Spring adequado, ou seja, `-Dspring.profiles.active=activeMqEnabled` (ou uma das outras formas Spring de configurá-lo).
 
 Checkstyle and Spotless
 ============
