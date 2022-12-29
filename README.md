@@ -303,7 +303,7 @@ Instruções para executar o Apache RAT (ferramenta de auditoria de lançamento)
 2. Run `./gradlew rat`. A report will be generated under build/reports/rat/rat-report.txt
 
 
-Instructions to enable ActiveMQ
+Instruções para ativar o ActiveMQ
 ============
 Messaging configuration is disabled by default. If you want to enable it and register some message listeners, application needs to be started with the proper Spring profile, ie `-Dspring.profiles.active=activeMqEnabled` (or one of the other Spring ways to configure it).
 
