@@ -300,7 +300,7 @@ Nesse caso, você precisa baixá-lo usando os comandos abaixo:
 Instruções para executar o Apache RAT (ferramenta de auditoria de lançamento)
 ============
 1. Extraia o arquivo compactado para seu diretório local.
-2. Run `./gradlew rat`. A report will be generated under build/reports/rat/rat-report.txt
+2. Run `./gradlew rat`. Um relatório será gerado sob build/reports/rat/rat-report.txt
 
 
 Instruções para ativar o ActiveMQ
