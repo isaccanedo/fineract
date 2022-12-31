@@ -310,7 +310,7 @@ A configuração de mensagens é desativada por padrão. Se você quiser ativá-
 Checkstyle and Spotless
 ============
 
-This project enforces its code conventions using [checkstyle.xml](config/checkstyle/checkstyle.xml) through Checkstyle and [fineract-formatting-preferences.xml](config/fineract-formatting-preferences.xml) through Spotless. They are configured to run automatically during the normal Gradle build, and fail if there are any violations detected. You can run the following command to automatically fix spotless violations:
+Este projeto reforça suas convenções de código usando [checkstyle.xml](config/checkstyle/checkstyle.xml) até Checkstyle e [fineract-formatting-preferences.xml](config/fineract-formatting-preferences.xml) até Spotless. They are configured to run automatically during the normal Gradle build, and fail if there are any violations detected. You can run the following command to automatically fix spotless violations:
 
     `./gradlew spotlessApply`
 
