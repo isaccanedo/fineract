@@ -20,7 +20,7 @@ Se você estiver interessado em contribuir para este projeto, mas talvez não sa
 
 Requisitos
 ============
-* Java >= 17 (Azul Zulu JVM is tested by our CI on GitHub Actions)
+* Java >= 17 (Azul Zulu JVM é testado por nosso CI no GitHub Actions)
 * MariaDB 10.9
 
 Você pode executar a versão necessária do servidor de banco de dados em um contêiner, em vez de instalá-lo, assim:
