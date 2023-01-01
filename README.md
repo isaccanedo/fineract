@@ -316,7 +316,7 @@ Este projeto reforça suas convenções de código usando [checkstyle.xml](confi
 
 Como algumas verificações estão presentes tanto no Checkstyle quanto no Spotless, o mesmo comando pode ajudá-lo a corrigir algumas das violações do Checkstyle (mas não todas, outras violações do Checkstyle precisam ser corrigidas manualmente).
 
-You can also check for Spotless violations (only; but normally don't have to, because the regular build full already includes this anyway):
+Você também pode verificar se há violações Spotless (apenas; mas normalmente não é necessário, porque a compilação regular completa já inclui isso de qualquer maneira):
 
     `./gradlew spotlessCheck`
 
