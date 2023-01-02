@@ -335,7 +335,7 @@ O projeto usa Jacoco para medir a cobertura do código de testes de unidade, par
 Os relatórios gerados podem ser encontrados no diretório build/code-coverage.
 
 
-Versions
+Versões
 ============
 
 The latest stable release can be viewed on the develop branch: [Latest Release on Develop](https://github.com/apache/fineract/tree/develop "Latest Release").
