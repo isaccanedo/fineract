@@ -357,7 +357,7 @@ Conforme discutido em [LEGAL-462](https://issues.apache.org/jira/browse/LEGAL-46
 está em conformidade com a [política de licença de terceiros da Apache Software Foundation](https://www. .apache.org/legal/resolved.html).
 
 
-Apache Fineract Platform API
+API da plataforma Apache Fineract
 ============
 
 The API for Fineract is documented in [apiLive.htm](fineract-provider/src/main/resources/static/api-docs/apiLive.htm), and the [apiLive.htm can be viewed on Fineract.dev](https://fineract.apache.org/legacy-docs/apiLive.htm "API Documentation").  If you have your own Fineract instance running, you can find this documentation under [/fineract-provider/api-docs/apiLive.htm](https://localhost:8443/fineract-provider/api-docs/apiLive.htm).
