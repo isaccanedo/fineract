@@ -353,8 +353,8 @@ desenvolvimento ao executar testes de integração que usam a biblioteca Liquiba
 não está incluído e distribuído com o produto Fineract e não é necessário para usar o produto.
 Se você é um desenvolvedor e se opõe ao uso do driver JDBC Connector/J licenciado pela LGPL, 
 simplesmente não execute os testes de integração que usam a biblioteca Liquibase e/ou use outro driver JDBC.
-As discussed in [LEGAL-462](https://issues.apache.org/jira/browse/LEGAL-462), this project therefore
-complies with the [Apache Software Foundation third-party license policy](https://www.apache.org/legal/resolved.html).
+Conforme discutido em [LEGAL-462](https://issues.apache.org/jira/browse/LEGAL-462), este projeto, portanto, 
+está em conformidade com a [política de licença de terceiros da Apache Software Foundation](https://www. .apache.org/legal/resolved.html).
 
 
 Apache Fineract Platform API
