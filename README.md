@@ -328,7 +328,7 @@ Você também pode usar o Checkstyle diretamente no seu IDE (mas não necessaria
 Relatórios de Cobertura de Código
 ============
 
-The project uses Jacoco to measure unit tests code coverage, to generate a report run the following command:
+O projeto usa Jacoco para medir a cobertura do código de testes de unidade, para gerar um relatório, execute o seguinte comando:
 
     `./gradlew clean build jacocoTestReport`
 
