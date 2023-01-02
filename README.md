@@ -351,8 +351,8 @@ Este projeto está licenciado sob a Licença Apache Versão 2.0. Consulte <https
 A biblioteca cliente Connector/J JDBC Driver da MariaDB.org, que é licenciada sob a LGPL, é usada no 
 desenvolvimento ao executar testes de integração que usam a biblioteca Liquibase. Esse driver JDBC, no entanto, 
 não está incluído e distribuído com o produto Fineract e não é necessário para usar o produto.
-If you are developer and object to using the LGPL licensed Connector/J JDBC driver,
-simply do not run the integration tests that use the Liquibase library and/or use another JDBC driver.
+Se você é um desenvolvedor e se opõe ao uso do driver JDBC Connector/J licenciado pela LGPL, 
+simplesmente não execute os testes de integração que usam a biblioteca Liquibase e/ou use outro driver JDBC.
 As discussed in [LEGAL-462](https://issues.apache.org/jira/browse/LEGAL-462), this project therefore
 complies with the [Apache Software Foundation third-party license policy](https://www.apache.org/legal/resolved.html).
 
