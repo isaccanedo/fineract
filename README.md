@@ -322,7 +322,7 @@ Você também pode verificar se há violações Spotless (apenas; mas normalment
 
 Recomendamos que você configure seu Java IDE favorito para corresponder a essas convenções. Para Eclipse, você pode ir para
 Window > Java > Code Style e importar o nosso [config/fineractdev-formatter.xml](config/fineractdev-formatter.xml) na seção formatador e [config/fineractdev-cleanup.xml](config/fineractdev-cleanup.xml) na seção Limpar. O mesmo arquivo de configuração fineractdev-formatter.xml (que pode ser usado no Eclipse IDE) também é usado pelo Spotless para verificar violações e código de formatação automática na CLI.
-Você também pode usar o Checkstyle diretamente no seu IDE (mas não necessariamente, pode ser mais conveniente para você).  For Eclipse, use https://checkstyle.org/eclipse-cs/ and load our checkstyle.xml into it, for IntelliJ you can use [CheckStyle-IDEA](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea).
+Você também pode usar o Checkstyle diretamente no seu IDE (mas não necessariamente, pode ser mais conveniente para você).  Para Eclipse, use https://checkstyle.org/eclipse-cs/ e carregue nosso checkstyle.xml nele, para IntelliJ você pode usar [CheckStyle-IDEA](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea).
 
 
 Code Coverage Reports
