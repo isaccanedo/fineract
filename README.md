@@ -338,7 +338,7 @@ Os relatórios gerados podem ser encontrados no diretório build/code-coverage.
 Versões
 ============
 
-A versão estável mais recente pode ser visualizada no ramo de desenvolvimento: [Latest Release on Develop](https://github.com/apache/fineract/tree/develop "Latest Release").
+A versão estável mais recente pode ser visualizada no ramo de desenvolvimento: [Latest Release on Develop](https://github.com/apache/fineract/tree/develop "Último lançamento").
 
 The progress of this project can be viewed here: [View change log](https://github.com/apache/fineract/blob/develop/CHANGELOG.md "Latest release change log")
 
