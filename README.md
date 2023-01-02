@@ -343,7 +343,7 @@ A versão estável mais recente pode ser visualizada no ramo de desenvolvimento:
 O andamento deste projeto pode ser visualizado aqui: [Ver change log](https://github.com/apache/fineract/blob/develop/CHANGELOG.md "Latest release change log")
 
 
-License
+Licença
 ============
 
 This project is licensed under Apache License Version 2.0. See <https://github.com/apache/incubator-fineract/blob/develop/LICENSE.md> for reference.
