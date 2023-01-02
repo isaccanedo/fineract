@@ -332,7 +332,7 @@ O projeto usa Jacoco para medir a cobertura do código de testes de unidade, par
 
     `./gradlew clean build jacocoTestReport`
 
-Generated reports can be found in build/code-coverage directory.
+Os relatórios gerados podem ser encontrados no diretório build/code-coverage.
 
 
 Versions
