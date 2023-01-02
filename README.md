@@ -346,7 +346,7 @@ O andamento deste projeto pode ser visualizado aqui: [Ver change log](https://gi
 Licença
 ============
 
-This project is licensed under Apache License Version 2.0. See <https://github.com/apache/incubator-fineract/blob/develop/LICENSE.md> for reference.
+Este projeto está licenciado sob a Licença Apache Versão 2.0. Consulte <https://github.com/apache/incubator-fineract/blob/develop/LICENSE.md> para referência.
 
 The Connector/J JDBC Driver client library from MariaDB.org, which is licensed under the LGPL,
 is used in development when running integration tests that use the Liquibase library.  That JDBC
