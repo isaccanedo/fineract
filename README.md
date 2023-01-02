@@ -340,7 +340,7 @@ Versões
 
 A versão estável mais recente pode ser visualizada no ramo de desenvolvimento: [Latest Release on Develop](https://github.com/apache/fineract/tree/develop "Último lançamento").
 
-The progress of this project can be viewed here: [View change log](https://github.com/apache/fineract/blob/develop/CHANGELOG.md "Latest release change log")
+O andamento deste projeto pode ser visualizado aqui: [Ver change log](https://github.com/apache/fineract/blob/develop/CHANGELOG.md "Latest release change log")
 
 
 License
