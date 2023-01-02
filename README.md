@@ -325,7 +325,7 @@ Window > Java > Code Style e importar o nosso [config/fineractdev-formatter.xml]
 Você também pode usar o Checkstyle diretamente no seu IDE (mas não necessariamente, pode ser mais conveniente para você).  Para Eclipse, use https://checkstyle.org/eclipse-cs/ e carregue nosso checkstyle.xml nele, para IntelliJ você pode usar [CheckStyle-IDEA](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea).
 
 
-Code Coverage Reports
+Relatórios de Cobertura de Código
 ============
 
 The project uses Jacoco to measure unit tests code coverage, to generate a report run the following command:
