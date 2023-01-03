@@ -479,6 +479,6 @@ Upgrades sometimes require package name changes.  Changed code should ideally ha
 Our `ClasspathHellDuplicatesCheckRuleTest` detects classes that appear in more than 1 JAR.  If a version bump in [`build.gradle`](https://github.com/search?q=repo%3Aapache%2Ffineract+filename%3Abuild.gradle&type=Code&ref=advsearch&l=&l=) causes changes in transitives dependencies, then you may have to add related `exclude` to our [`dependencies.gradle`](https://github.com/apache/fineract/search?q=dependencies.gradle).  Running `./gradlew dependencies` helps to understand what is required.
 
 
-More Information
+Mais informações
 ============
 More details of the project can be found at <https://cwiki.apache.org/confluence/display/FINERACT>.
