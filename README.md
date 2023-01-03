@@ -433,7 +433,7 @@ Diretrizes de registro
   * `LOG.debug()` can be used anywhere in the code to log things that may be useful during investigations of specific problems.  They are not shown in the default logging configuration, but can be enabled for troubleshooting.  Developers should typically "turn down" most `LOG.info()` which they used while writing a new feature to "follow along what happens during local testing" to `LOG.debug()` for production before we merge their PRs.
   * `LOG.trace()` is not used in Fineract.
 
-Pull Requests
+Requisições pull
 -------------
 
 We request that your commit message include a FINERACT JIRA issue, recommended to be put in parenthesis add the end of the first line.  Start with an upper case imperative verb (not past form), and a short but concise clear description. (E.g. _Add enforced HideUtilityClassConstructor checkstyle (FINERACT-821)_ or _Fix inability to reschedule when interest accrued larger than EMI (FINERACT-1109)_ etc.).
