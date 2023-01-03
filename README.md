@@ -399,7 +399,7 @@ Por favor, visite [our JIRA Dashboard](https://issues.apache.org/jira/secure/Das
 Video Demonstration
 ============
 
-Apache Fineract / Mifos X Demo (November 2016) - <https://www.youtube.com/watch?v=h61g9TptMBo>
+Apache Fineract / Mifos X Demo (novembro de 2016) - <https://www.youtube.com/watch?v=h61g9TptMBo>
 
 Documentação Swagger-UI
 ============
