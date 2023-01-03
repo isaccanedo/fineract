@@ -438,7 +438,7 @@ Requisições pull
 
 We request that your commit message include a FINERACT JIRA issue, recommended to be put in parenthesis add the end of the first line.  Start with an upper case imperative verb (not past form), and a short but concise clear description. (E.g. _Add enforced HideUtilityClassConstructor checkstyle (FINERACT-821)_ or _Fix inability to reschedule when interest accrued larger than EMI (FINERACT-1109)_ etc.).
 
-If your PR is failing to pass our CI build due to a test failure, then:
+Se o seu PR não passar em nossa compilação de CI devido a uma falha no teste, então:
 
 1. Understand if the failure is due to your PR or an unrelated unstable test.
 1. If you suspect it is because of a "flaky" test, and not due to a change in your PR, then please do not simply wait for an active maintainer to come and help you, but instead be a proactive contributor to the project - see next steps.  Do understand that we may not review PRs that are not green - it is the contributor's (that's you!) responsability to get a proposed PR to pass the build, not primarily the maintainers.
