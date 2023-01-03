@@ -410,7 +410,7 @@ We use Swagger-UI to generate and maintain our API documentation, you can see th
 Governança e Políticas
 =======================
 
-[Becoming a Committer](https://cwiki.apache.org/confluence/display/FINERACT/Becoming+a+Committer)
+[Tornando-se um Committer](https://cwiki.apache.org/confluence/display/FINERACT/Becoming+a+Committer)
 documents the process through which you can become a committer in this project.
 
 
