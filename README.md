@@ -362,7 +362,7 @@ API da plataforma Apache Fineract
 
 A API para Fineract está documentada em [apiLive.htm](fineract-provider/src/main/resources/static/api-docs/apiLive.htm), e a [apiLive.htm can be viewed on Fineract.dev](https://fineract.apache.org/legacy-docs/apiLive.htm "API Documentation").  Se você tiver sua própria instância do Fineract em execução, poderá encontrar esta documentação em [/fineract-provider/api-docs/apiLive.htm](https://localhost:8443/fineract-provider/api-docs/apiLive.htm).
 
-The Swagger documentation (work in progress; see [FINERACT-733](https://issues.apache.org/jira/browse/FINERACT-733)) can be accessed under [/fineract-provider/swagger-ui/index.html](https://localhost:8443/fineract-provider/swagger-ui/index.html) and [live Swagger UI here on Fineract.dev](https://demo.fineract.dev/fineract-provider/swagger-ui/index.html).
+A documentação do Swagger (work in progress; see [FINERACT-733](https://issues.apache.org/jira/browse/FINERACT-733)) can be accessed under [/fineract-provider/swagger-ui/index.html](https://localhost:8443/fineract-provider/swagger-ui/index.html) and [live Swagger UI here on Fineract.dev](https://demo.fineract.dev/fineract-provider/swagger-ui/index.html).
 
 O Apache Fineract oferece suporte à geração de código do cliente usando [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) baseado no [OpenAPI Specification](https://swagger.io/specification/).  For more instructions on how to generate the client code, check [docs/developers/swagger/client.md](docs/developers/swagger/client.md).
 
