@@ -401,7 +401,7 @@ Video Demonstration
 
 Apache Fineract / Mifos X Demo (November 2016) - <https://www.youtube.com/watch?v=h61g9TptMBo>
 
-Swagger-UI Documentation
+Documentação Swagger-UI
 ============
 
 We use Swagger-UI to generate and maintain our API documentation, you can see the demo video [here](https://www.youtube.com/watch?v=FlVd-0YAo6c) or a live version
