@@ -421,7 +421,7 @@ Error Handling Guidelines
 * In tests, you'll typically never catch exceptions, but just propagate them, with `@Test void testXYZ() throws SomeException, AnotherException`..., so that the test fails if the exception happens.  Unless you actually really want to test for the occurence of a problem - in that case, use [JUnit's Assert.assertThrows()](https://github.com/junit-team/junit4/wiki/Exception-testing) (but not `@Test(expected = SomeException.class)`).
 * Never catch `NullPointerException` & Co.
 
-Logging Guidelines
+Diretrizes de registro
 ------------------
 * We use [SLF4J](http://www.slf4j.org) as our logging API.
 * Never, ever, use `System.out` and `System.err` or `printStackTrace()` anywhere, but always `LOG.info()` or `LOG.error()` instead.
