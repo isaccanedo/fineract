@@ -385,7 +385,7 @@ Online Demos
 
 
 
-Developers
+Desenvolvedores
 ============
 Please see <https://cwiki.apache.org/confluence/display/FINERACT/Contributor%27s+Zone> for the developers wiki page.
 
