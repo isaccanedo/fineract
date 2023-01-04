@@ -364,7 +364,7 @@ A API para Fineract está documentada em [apiLive.htm](fineract-provider/src/mai
 
 A documentação do Swagger (work in progress; see [FINERACT-733](https://issues.apache.org/jira/browse/FINERACT-733)) can be accessed under [/fineract-provider/swagger-ui/index.html](https://localhost:8443/fineract-provider/swagger-ui/index.html) and [live Swagger UI here on Fineract.dev](https://demo.fineract.dev/fineract-provider/swagger-ui/index.html).
 
-O Apache Fineract oferece suporte à geração de código do cliente usando [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) baseado no [OpenAPI Specification](https://swagger.io/specification/).  Para obter mais instruções sobre como gerar o código do cliente, consulte [docs/developers/swagger/client.md](docs/developers/swagger/client.md).
+O Apache Fineract oferece suporte à geração de código do cliente usando [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) baseado no [OpenAPI Specification](https://swagger.io/specification/). Para obter mais instruções sobre como gerar o código do cliente, consulte [docs/developers/swagger/client.md](docs/developers/swagger/client.md).
 
 
 API clients (Web UIs, Mobile, etc.)
@@ -380,7 +380,7 @@ Demonstrações on-line
 ============
 
 * [fineract.dev](https://www.fineract.dev)sempre executa a versão mais recente deste código
-* [demo.mifos.io](https://demo.mifos.io) Uma conta de demonstração é fornecida para que os usuários experimentem a funcionalidade do Community App. Users can use "mifos" for USERNAME and "password" for PASSWORD (without quotation marks).
+* [demo.mifos.io](https://demo.mifos.io) Uma conta de demonstração é fornecida para que os usuários experimentem a funcionalidade do Community App. Os usuários podem usar "mifos" para USERNAME e "password" para PASSWORD (sem aspas).
 * [Swagger-UI Demo video](https://www.youtube.com/watch?v=FlVd-0YAo6c) This is a demo video for Swagger-UI documentation, more information [here](https://github.com/apache/fineract#swagger-ui-documentation).
 
 
