@@ -410,7 +410,7 @@ Governança e Políticas
 =======================
 
 [Tornando-se um Committer](https://cwiki.apache.org/confluence/display/FINERACT/Becoming+a+Committer)
-documents the process through which you can become a committer in this project.
+documenta o processo pelo qual você pode se tornar um committer neste projeto.
 
 
 Error Handling Guidelines
