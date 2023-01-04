@@ -396,7 +396,7 @@ Please see <https://cwiki.apache.org/confluence/display/FINERACT/How-to+articles
 Por favor, visite [our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) to find issues to work on, see what others are working on, or open new issues.
 
 
-Video Demonstration
+Demonstração em vídeo
 ============
 
 Apache Fineract / Mifos X Demo (novembro de 2016) - <https://www.youtube.com/watch?v=h61g9TptMBo>
