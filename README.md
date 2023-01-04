@@ -393,7 +393,7 @@ Please refer to <https://cwiki.apache.org/confluence/display/FINERACT/Fineract+1
 
 Please see <https://cwiki.apache.org/confluence/display/FINERACT/How-to+articles> para obter detalhes técnicos para começar.
 
-Por favor, visite [our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) to find issues to work on, see what others are working on, or open new issues.
+Por favor, visite [our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) para encontrar problemas para trabalhar, ver no que os outros estão trabalhando ou abrir novos problemas.
 
 
 Demonstração em vídeo
