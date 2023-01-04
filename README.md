@@ -389,7 +389,7 @@ Desenvolvedores
 ============
 Please see <https://cwiki.apache.org/confluence/display/FINERACT/Contributor%27s+Zone> para a página wiki dos desenvolvedores.
 
-Please refer to <https://cwiki.apache.org/confluence/display/FINERACT/Fineract+101> for the first-time contribution to this project.
+Please refer to <https://cwiki.apache.org/confluence/display/FINERACT/Fineract+101> pela primeira contribuição a este projeto.
 
 Please see <https://cwiki.apache.org/confluence/display/FINERACT/How-to+articles> for technical details to get started.
 
