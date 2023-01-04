@@ -376,7 +376,7 @@ API clients (Web UIs, Mobile, etc.)
 * https://github.com/openMF has more related proejcts
 
 
-Online Demos
+Demonstrações on-line
 ============
 
 * [fineract.dev](https://www.fineract.dev) always runs the latest version of this code
