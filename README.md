@@ -371,7 +371,7 @@ API clients (Web UIs, Mobile, etc.)
 ============
 
 * https://github.com/openMF/community-app/ é a interface do usuário da Web do aplicativo cliente de referência "tradicional" para a API oferecida por este projeto
-* https://github.com/openMF/web-app is the next generation UI rewrite also using this project's API
+* https://github.com/openMF/web-app é a reescrita de interface do usuário de próxima geração também usando a API deste projeto
 * https://github.com/openMF/android-client is an Android Mobile App client for this project's API
 * https://github.com/openMF has more related proejcts
 
