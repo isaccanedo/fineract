@@ -422,7 +422,7 @@ Diretrizes de tratamento de erros
 
 Diretrizes de registro
 ------------------
-* Nós usamos [SLF4J](http://www.slf4j.org) as our logging API.
+* Nós usamos [SLF4J](http://www.slf4j.org) como nossa API de registro.
 * Never, ever, use `System.out` and `System.err` or `printStackTrace()` anywhere, but always `LOG.info()` or `LOG.error()` instead.
 * Use placeholder (`LOG.error("Could not... details: {}", something, exception)`) and never String concatenation (`LOG.error("Could not... details: " + something, exception)`)
 * Which Log Level is appropriate?
