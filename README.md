@@ -417,7 +417,7 @@ Diretrizes de tratamento de erros
 ------------------
 * Ao capturar exceções, lance-as novamente ou registre-as. De qualquer forma, inclua a causa raiz usando `catch (SomeException e)` e então `throw AnotherException("..details..", e)` ou `LOG.error("...contexto...", e)`.
 * Blocos catch completamente vazios são MUITO suspeitos! Tem certeza de que deseja apenas "engolir" uma exceção?  Realmente, 100% totalmente absolutamente certo?? ;-) Essas "exceções normais que acontecem às vezes, mas na verdade não são realmente erros" são quase sempre uma má ideia, podem ser um problema de desempenho e normalmente são uma indicação de outro problema - por exemplo, o uso de uma API errada que lança uma exceção para uma condição esperada, quando na verdade você gostaria de usar outra API que retornasse algo vazio ou opcional.
-* In tests, you'll typically never catch exceptions, but just propagate them, with `@Test void testXYZ() throws SomeException, AnotherException`..., so that the test fails if the exception happens.  Unless you actually really want to test for the occurence of a problem - in that case, use [JUnit's Assert.assertThrows()](https://github.com/junit-team/junit4/wiki/Exception-testing) (but not `@Test(expected = SomeException.class)`).
+* Em testes, você normalmente nunca captura exceções, mas apenas as propaga, com `@Test void testXYZ() throws SomeException, AnotherException`..., so that the test fails if the exception happens.  Unless you actually really want to test for the occurence of a problem - in that case, use [JUnit's Assert.assertThrows()](https://github.com/junit-team/junit4/wiki/Exception-testing) (but not `@Test(expected = SomeException.class)`).
 * Never catch `NullPointerException` & Co.
 
 Diretrizes de registro
