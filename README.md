@@ -391,7 +391,7 @@ Por favor, veja <https://cwiki.apache.org/confluence/display/FINERACT/Contributo
 
 Por favor, consulte <https://cwiki.apache.org/confluence/display/FINERACT/Fineract+101> pela primeira contribuição a este projeto.
 
-Please see <https://cwiki.apache.org/confluence/display/FINERACT/How-to+articles> para obter detalhes técnicos para começar.
+Por favor, veja <https://cwiki.apache.org/confluence/display/FINERACT/How-to+articles> para obter detalhes técnicos para começar.
 
 Por favor, visite [our JIRA Dashboard](https://issues.apache.org/jira/secure/Dashboard.jspa?selectPageId=12335824) para encontrar problemas para trabalhar, ver no que os outros estão trabalhando ou abrir novos problemas.
 
