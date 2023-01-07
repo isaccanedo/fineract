@@ -435,7 +435,7 @@ Diretrizes de registro
 Requisições pull
 -------------
 
-We request that your commit message include a FINERACT JIRA issue, recommended to be put in parenthesis add the end of the first line.  Start with an upper case imperative verb (not past form), and a short but concise clear description. (E.g. _Add enforced HideUtilityClassConstructor checkstyle (FINERACT-821)_ or _Fix inability to reschedule when interest accrued larger than EMI (FINERACT-1109)_ etc.).
+Solicitamos que sua mensagem de confirmação inclua um problema FINERACT JIRA, recomendado para ser colocado entre parênteses, adicione o final da primeira linha.  Start with an upper case imperative verb (not past form), and a short but concise clear description. (E.g. _Add enforced HideUtilityClassConstructor checkstyle (FINERACT-821)_ or _Fix inability to reschedule when interest accrued larger than EMI (FINERACT-1109)_ etc.).
 
 Se o seu PR não passar em nossa compilação de CI devido a uma falha no teste, então:
 
