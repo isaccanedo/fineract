@@ -430,7 +430,7 @@ Diretrizes de registro
   * `LOG.warn()` deve usar com moderação.  Decida se é um erro (acima) - ou não!
   * `LOG.info()` pode ser usado principalmente para ações únicas realizadas durante a inicialização.  It should typically NOT be used to print out "regular" application usage information.  A configuração de log padrão sempre gera os logs INFO do aplicativo e, na produção sob carga, não há motivo para despejar constantemente muitas informações de caminhos frequentemente percorridos no código sobre o que está acontecendo.  (Metrics are a better way.)  `LOG.info()` *pode* ser usado livremente em testes.
   * `LOG.debug()` pode ser usado em qualquer lugar do código para registrar coisas que podem ser úteis durante investigações de problemas específicos.  Eles não são mostrados na configuração de registro padrão, mas podem ser ativados para solução de problemas.  Developers should typically "turn down" most `LOG.info()` que eles usaram ao escrever um novo recurso para "acompanhar o que acontece durante o teste local" para`LOG.debug()` for production before we merge their PRs.
-  * `LOG.trace()` is not used in Fineract.
+  * `LOG.trace()` não é usado no Fineract.
 
 Requisições pull
 -------------
