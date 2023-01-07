@@ -424,7 +424,7 @@ Diretrizes de registro
 ------------------
 * Nós usamos [SLF4J](http://www.slf4j.org) como nossa API de registro.
 * Nunca, jamais, use `System.out` and `System.err` or `printStackTrace()` anywhere, but always `LOG.info()` or `LOG.error()` instead.
-*Usar espaço reservado (`LOG.error("Could not... details: {}", something, exception)`) and never String concatenation (`LOG.error("Could not... details: " + something, exception)`)
+*Usar espaço reservado (`LOG.error("Could not... details: {}", something, exception)`) e nunca Concatenação de strings (`LOG.error("Could not... details: " + something, exception)`)
 * Qual nível de registro é apropriado?
   * `LOG.error()` deve ser usado para informar um "operador" executando o Fineract que supervisiona os logs de erro de uma condição inesperada. Isso inclui problemas técnicos com um "ambiente" externo (por exemplo, não é possível acessar um banco de dados) e situações que são prováveis erros que precisam ser corrigidos no código.  Eles NÃO incluem, por exemplo, erros de validação para solicitações de API recebidas - that is signaled through the API response - and does (should) not be logged as an error.  (Note that there is no _FATAL_ level in SLF4J; a "FATAL" event should just be logged as an _ERROR_.)
   * `LOG.warn()` should be using sparingly.  Make up your mind if it's an error (above) - or not!
