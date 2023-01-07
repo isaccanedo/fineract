@@ -439,7 +439,7 @@ We request that your commit message include a FINERACT JIRA issue, recommended t
 
 Se o seu PR não passar em nossa compilação de CI devido a uma falha no teste, então:
 
-1. Understand if the failure is due to your PR or an unrelated unstable test.
+1. Entenda se a falha se deve ao seu PR ou a um teste instável não relacionado.
 1. If you suspect it is because of a "flaky" test, and not due to a change in your PR, then please do not simply wait for an active maintainer to come and help you, but instead be a proactive contributor to the project - see next steps.  Do understand that we may not review PRs that are not green - it is the contributor's (that's you!) responsability to get a proposed PR to pass the build, not primarily the maintainers.
 1. Search for the name of the failed test on https://issues.apache.org/jira/, e.g. for `AccountingScenarioIntegrationTest` you would find [FINERACT-899](https://issues.apache.org/jira/browse/FINERACT-899).
 1. If you happen to read in such bugs that tests were just recently fixed, or ignored, then rebase your PR to pick up that change.
