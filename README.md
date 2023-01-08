@@ -471,7 +471,7 @@ Neither of these two are hard absolute rules, but mere conventions.  Multiple co
 Dependency Upgrades
 -------------------
 
-This project uses a number of 3rd-party libraries, and this section provides some guidance for their updates. We have set-up [Renovate's bot](https://renovate.whitesourcesoftware.com) to automatically raise Pull Requests for our review when new dependencies are available [FINERACT-962](https://issues.apache.org/jira/browse/FINERACT-962).
+Este projeto usa várias bibliotecas de terceiros e esta seção fornece algumas orientações para suas atualizações. We have set-up [Renovate's bot](https://renovate.whitesourcesoftware.com) to automatically raise Pull Requests for our review when new dependencies are available [FINERACT-962](https://issues.apache.org/jira/browse/FINERACT-962).
 
 Às vezes, as atualizações exigem alterações no nome do pacote. O código alterado deve, idealmente, ter cobertura de teste.
 
